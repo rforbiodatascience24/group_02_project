@@ -1,7 +1,13 @@
 # group_02_project
 
 ## Data:
-COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University:
-https://github.com/CSSEGISandData/COVID-19
+This is data on COVID-19 vaccination progress taken from Kaggle. The data was, during the period, updated daily. 
+https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vaccinations.csv&fbclid=IwZXh0bgNhZW0CMTEAAR3OtW8D_QG9A8kUlkJYTV6N-zb-8QOyffgzf9W7KmfZcp-Hxfhpa-WOCBQ_aem_GT1aKjRx2iNuKZoEzxbADw
 
-Dong E, Du H, Gardner L. An interactive web-based dashboard to track COVID-19 in real time. Lancet Inf Dis. 20(5):533-534. doi: 10.1016/S1473-3099(20)30120-1
+There are two csv. files within this dataset: 
+
+country_vaccinations.csv (17.73 MB)
+country_vaccinations_by_manufacturer.csv(1.5 MB)
+
+
+
