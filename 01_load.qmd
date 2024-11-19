@@ -1,0 +1,21 @@
+---
+title: "01_load"
+author: "Group 02"
+format: html
+editor: visual
+---
+
+## Loading the Data
+
+```{r}
+library(tidyverse)
+
+vaccinations <- "data/_raw/country_vaccinations.csv"
+
+vaccinations_data <- read_csv(vaccinations)
+
+manufacturer <- "data/_raw/country_vaccinations_by_manufacturer.csv"
+
+manufacturer_data <- read_csv(manufacturer)
+```
+
