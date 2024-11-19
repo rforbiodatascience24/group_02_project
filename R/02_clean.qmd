@@ -1,0 +1,51 @@
+---
+title: "02_clean_data"
+author: "Group 02"
+format: html
+editor: visual
+---
+
+## Clean data 1
+
+```{r}
+library(tidyverse)
+library(dplyr)
+```
+
+We load the dataset
+```{r}
+manufacturer_update <- read_tsv("data/01_manufacturer_load.tsv")
+vaccines_update <- read_tsv("data/01_vaccines_load.tsv")
+```
+
+We inspect the structure
+```{r}
+glimpse(manufacturer_update)
+glimpse(vaccines_update)
+```
+
+We start of by cleaning manufacturer data
+```{r}
+manufacturer_cleaned <- manufacturer_update |>
+  distinct() |> #This is to remove any duplicates there might be
+  drop_na(location, date, vaccine) |> #removing the missing
+  mutate(date = as.Date(date, format = "%Y-%m-%d")) #Here we make sure the dates are in the corret format
+  
+```
+
+We do the same with the vaccine data
+```{r}
+vaccines_cleaned <- vaccines_update |> 
+  distinct() |> 
+  mutate(
+    date = as.Date(date, format = "%Y-%m-%d"),
+    total_vaccinations = if_else(is.na(total_vaccinations), NA_real_, total_vaccinations),
+    daily_vaccinations = if_else(is.na(daily_vaccinations), NA_real_, daily_vaccinations),
+    vaccines = replace_na(vaccines, "unknown") #Replace rows where the vaccines are missing with unknown, so it doesn't get grouped with the numeric NA
+  ) |>
+  mutate(
+    missing_total_vaccinations = is.na(total_vaccinations), #Using this we can flag the missing rows
+    missing_daily_vaccinations = is.na(daily_vaccinations)
+  )
+```
+
