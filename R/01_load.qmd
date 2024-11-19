@@ -7,8 +7,8 @@ Here we will make a new data file under the data-folder named; "01\_...\_load.ts
 library(tidyverse)
 
 # Load data into variable
-vaccines <- "/net/pupil1/home/people/s224987/Projects/group_02_project/data/_raw/country_vaccinations.csv"
-manufacturer <- "/net/pupil1/home/people/s224987/Projects/group_02_project/data/_raw/country_vaccinations_by_manufacturer.csv"
+vaccines <- "../data/_raw/country_vaccinations.csv"
+manufacturer <- "../data/_raw/country_vaccinations_by_manufacturer.csv"
 
 # Read CSV 
 vaccines_data <- read_csv(vaccines)
@@ -17,10 +17,8 @@ manufacturer_data <- read_csv(manufacturer)
 # Writing TSV files
 ## Vaccines data
 write_tsv(x = vaccines_data,
-          file = str_c("/net/pupil1/home/people/s224987/Projects/group_02_project/data/",
-                       "01_vaccines_load.tsv"))
+          file = str_c("../data/", "01_vaccines_load.tsv"))
 ## Manufacturer data 
 write_tsv(x = manufacturer_data,
-          file = str_c("/net/pupil1/home/people/s224987/Projects/group_02_project/data/", 
-                       "01_manufacturer_load.tsv"))
+          file = str_c("../data/", "01_manufacturer_load.tsv"))
 ```
