@@ -1,0 +1,104 @@
+---
+title: "plots try out"
+format: html
+editor: visual
+---
+
+prøver endnu en gang
+
+```{r}
+
+# Loading libraries
+#| echo: false
+library(tidyverse)
+library(dplyr)
+library(scales)
+
+# Defining the different locataions and their population in 2021
+
+location <- c("Argentina", "Austria", "Belgium", "Bulgaria", "Croatia","Cyprus", "Czechia", "Denmark", "Ecuador", "Estonia", "Finland", "France", "Germany", "Hong Kong","Hungary","Iceland","Ireland","Italy","Japan","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Nepal","Netherlands","Norway","Peru","Poland","Portugal","Romania","Slovakia","Slovenia","South Africa","South Korea","Spain","Sweden","Switzerland","Ukraine", "United States", "Uruguay", "European Union")
+
+# And their populations in 2021 
+
+population <- c(48.81,8.956,11.59,6.878,3.879,1.244,10.51,5.857,17.8,1.331,5.541,67.76,83.2,7.413,9.71,0.372520,5.033,59.13,125.7,1.884,0.039039,2.801,0.640064,0.518536,30.03,17.53,5.408,33.72,37.75,10.36,19.12,5.447,2.108,59.39,51.77,47.42,10.42,8.705,43.85,332,3.426,446.9)
+
+# Creating popualtion tibble: 
+
+population_data_tibble <- tibble(location,population)
+```
+
+```{r}
+# Checking austria correct answer summary
+363548+1585063+3682+1588222+14584985
+```
+
+```{r}
+Vaccinated_by_country_all_vaccines <- manufacturer_data %>%
+  filter(date == '2022-03-25') %>%  # Filter by specific date
+  group_by(location) %>%  # Group by location
+  summarise(Total_vaccinations = sum(total_vaccinations, na.rm = TRUE))  # Summarize total vaccinations
+```
+
+This is the amount of vaccines done within the period. Most people, if given the full dosis, have recieved 2 vaccines during the period. Thus, the number will be divided by 2, to recieve the amount of people having recieved a full dosis.
+
+```{r}
+Vaccinated_by_country_all_vaccines <- Vaccinated_by_country_all_vaccines |> 
+  mutate(Vaccinated_fully=Total_vaccinations/2)
+```
+
+We have made a tibble with the countries and populations for 2021. We want to join this onto the `Vaccinated_by_country_all_vaccines`
+
+```{r}
+Clean_table <- Vaccinated_by_country_all_vaccines |> 
+  left_join(population_data_tibble,by="location") |> 
+  mutate(Vaccinated_fully_in_mio=Vaccinated_fully/1e6)
+
+Clean_table
+```
+
+Now we can finally found the percentage of how much of the population was vaccinated by the end of the period, at the date: 2022-03-25.
+
+```{r}
+Clean_table <- Clean_table |> 
+  mutate(percentage_vaccinated=(Vaccinated_fully_in_mio/population)*100)
+
+Clean_table
+```
+
+now we can make the world map:
+
+```{r}
+library(maps)
+world_map <- map_data("world")
+
+# Now we merge the world map and the data we just did: 
+
+world_map_vaccinated <- world_map |> 
+  left_join(Clean_table,by=c("region"="location"))
+
+Clean_table
+
+```
+
+```{r}
+ggplot(world_map_vaccinated, aes(x = long, y = lat, group = group, fill = percentage_vaccinated)) +
+  geom_polygon(color = "black", size = 0.2) +
+  scale_fill_gradient(low = "lightblue", high = "darkblue", na.value = "grey50", name = "Vaccination %") +
+  theme_minimal() +
+  labs(
+    title = "Vaccination Percentage by Country",
+    subtitle = "Countries color-coded by vaccination percentage. Grey countries not included.",
+    caption = "Data Source: Kaggle",
+    x = "hello",
+    y = "hello"
+    
+  ) +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  )
+```
+
+From this we can see which countries have the highest percentage of the population vaccinated by 2022-03-25.
