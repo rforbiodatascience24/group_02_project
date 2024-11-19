@@ -8,23 +8,28 @@ editor: visual
 ## Clean data 1
 
 ```{r}
+#|echo: false
 library(tidyverse)
 library(dplyr)
 ```
 
 We load the dataset
+
 ```{r}
-manufacturer_update <- read_tsv("data/01_manufacturer_load.tsv")
-vaccines_update <- read_tsv("data/01_vaccines_load.tsv")
+#|echo: false
+manufacturer_update <- read_tsv("../data/01_manufacturer_load.tsv")
+vaccines_update <- read_tsv("../data/01_vaccines_load.tsv")
 ```
 
 We inspect the structure
+
 ```{r}
 glimpse(manufacturer_update)
 glimpse(vaccines_update)
 ```
 
 We start of by cleaning manufacturer data
+
 ```{r}
 manufacturer_cleaned <- manufacturer_update |>
   distinct() |> #This is to remove any duplicates there might be
@@ -34,6 +39,7 @@ manufacturer_cleaned <- manufacturer_update |>
 ```
 
 We do the same with the vaccine data
+
 ```{r}
 vaccines_cleaned <- vaccines_update |> 
   distinct() |> 
@@ -48,4 +54,3 @@ vaccines_cleaned <- vaccines_update |>
     missing_daily_vaccinations = is.na(daily_vaccinations)
   )
 ```
-
