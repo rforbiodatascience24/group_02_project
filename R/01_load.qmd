@@ -1,1 +1,24 @@
-bla bla
+### Loading data
+
+Here we will make a new data file under the data-folder named; "01\_...\_load.tsv". We will combine the two data sets that we have into one.
+
+```{r}
+#| echo: false
+library(tidyverse)
+
+# Load data into variable
+vaccines <- "data/_raw/country_vaccinations.csv"
+manufacturer <- "data/_raw/country_vaccinations_by_manufacturer.csv"
+
+# Read CSV 
+vaccines_data <- read_csv(vaccines)
+manufacturer_data <- read_csv(manufacturer)
+
+# Writing TSV files
+## Vaccines data
+write_tsv(x = vaccines_data,
+          file = str_c("data/", "01_vaccines_load.tsv"))
+## Manufacturer data 
+write_tsv(x = manufacturer_data,
+          file = str_c("data/", "01_manufacturer_load.tsv"))
+```
