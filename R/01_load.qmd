@@ -9,10 +9,12 @@ library(tidyverse)
 # Load data into variable
 vaccines <- "../data/_raw/country_vaccinations.csv"
 manufacturer <- "../data/_raw/country_vaccinations_by_manufacturer.csv"
+world_population <- "../data/_raw/world_population.csv"
 
 # Read CSV 
 vaccines_data <- read_csv(vaccines)
 manufacturer_data <- read_csv(manufacturer)
+world_population_data <- read_csv(world_population)
 
 # Writing TSV files
 ## Vaccines data
@@ -21,4 +23,7 @@ write_tsv(x = vaccines_data,
 ## Manufacturer data 
 write_tsv(x = manufacturer_data,
           file = str_c("../data/", "01_manufacturer_load.tsv"))
+## World population data
+write_tsv(x = world_population_data,
+          file = str_c("../data/", "01_world_population_load.tsv"))
 ```

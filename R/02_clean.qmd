@@ -9,6 +9,8 @@ editor: visual
 
 ```{r}
 #|echo: false
+
+# Loading libraries 
 library(tidyverse)
 library(dplyr)
 ```
@@ -17,30 +19,37 @@ We load the dataset
 
 ```{r}
 #|echo: false
+
+# Importing load data
 manufacturer_update <- read_tsv("../data/01_manufacturer_load.tsv")
 vaccines_update <- read_tsv("../data/01_vaccines_load.tsv")
+world_population_update <- read_tsv("../data/01_world_population_load.tsv")
 ```
 
 We inspect the structure
 
 ```{r}
+# Looking at the data 
 glimpse(manufacturer_update)
 glimpse(vaccines_update)
+glimpse(world_population_update)
 ```
 
 We start of by cleaning manufacturer data
 
 ```{r}
+# Cleaning manufacturer data 
 manufacturer_cleaned <- manufacturer_update |>
   distinct() |> #This is to remove any duplicates there might be
   drop_na(location, date, vaccine) |> #removing the missing
   mutate(date = as.Date(date, format = "%Y-%m-%d")) #Here we make sure the dates are in the corret format
-  
+
 ```
 
 We do the same with the vaccine data
 
 ```{r}
+# Cleaning vaccine data 
 vaccines_cleaned <- vaccines_update |> 
   distinct() |> 
   mutate(
@@ -49,8 +58,40 @@ vaccines_cleaned <- vaccines_update |>
     daily_vaccinations = if_else(is.na(daily_vaccinations), NA_real_, daily_vaccinations),
     vaccines = replace_na(vaccines, "unknown") #Replace rows where the vaccines are missing with unknown, so it doesn't get grouped with the numeric NA
   ) |>
+  
+  
+  
   mutate(
     missing_total_vaccinations = is.na(total_vaccinations), #Using this we can flag the missing rows
     missing_daily_vaccinations = is.na(daily_vaccinations)
   )
+```
+
+Since the world population data is already tidy, and we only want to left join it to our other data to make a more comprehensive data set, we have decided to remove some irrelevant columns and then proceed.
+
+```{r}
+# Cleaning world population data 
+world_population_cleaned <- world_population_update |> 
+  select(`Country/Territory`, # Selecting the only relevant columns form the data
+         `Continent`,
+         `2022 Population`,
+         `2020 Population`,
+         `Growth Rate`)
+```
+
+Now we write the files:
+
+```{r}
+# Writing 02_cleaned files
+## Manufacturer cleaned
+write.csv(x = manufacturer_cleaned,
+          file = str_c("../data/", "02_manufacturer_cleaned.tsv"))
+
+## Vaccnies cleaned
+write.csv(x = vaccines_cleaned,
+          file = str_c("../data/", "02_vaccines_cleaned.tsv"))
+
+## World population cleaned
+write.csv(x = world_population_cleaned,
+          file = str_c("../data/", "02_world_population_cleaned.tsv"))
 ```
