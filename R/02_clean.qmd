@@ -54,17 +54,22 @@ vaccines_cleaned <- vaccines_update |>
   distinct() |> 
   mutate(
     date = as.Date(date, format = "%Y-%m-%d"),
-    total_vaccinations = if_else(is.na(total_vaccinations), NA_real_, total_vaccinations),
-    daily_vaccinations = if_else(is.na(daily_vaccinations), NA_real_, daily_vaccinations),
+    total_vaccinations = if_else(is.na(total_vaccinations), 
+                                 NA_real_, 
+                                 total_vaccinations),
+    daily_vaccinations = if_else(is.na(daily_vaccinations),
+                                 NA_real_,
+                                 daily_vaccinations),
     vaccines = replace_na(vaccines, "unknown") #Replace rows where the vaccines are missing with unknown, so it doesn't get grouped with the numeric NA
   ) |>
   
-  
-  
-  mutate(
-    missing_total_vaccinations = is.na(total_vaccinations), #Using this we can flag the missing rows
-    missing_daily_vaccinations = is.na(daily_vaccinations)
-  )
+  # Has just been added - removes columns and seperates values in single cell
+  select(-iso_code, # Removing irrelavent columns
+         -source_website,
+         -source_name,
+         -daily_vaccinations_raw) |> 
+  separate_rows(vaccines, # Seperates the observations so there is only 1 value pr cell
+                sep = ",")
 ```
 
 Since the world population data is already tidy, and we only want to left join it to our other data to make a more comprehensive data set, we have decided to remove some irrelevant columns and then proceed.
@@ -84,14 +89,14 @@ Now we write the files:
 ```{r}
 # Writing 02_cleaned files
 ## Manufacturer cleaned
-write.csv(x = manufacturer_cleaned,
+write_tsv(x = manufacturer_cleaned,
           file = str_c("../data/", "02_manufacturer_cleaned.tsv"))
 
 ## Vaccnies cleaned
-write.csv(x = vaccines_cleaned,
+write_tsv(x = vaccines_cleaned,
           file = str_c("../data/", "02_vaccines_cleaned.tsv"))
 
 ## World population cleaned
-write.csv(x = world_population_cleaned,
+write_tsv(x = world_population_cleaned,
           file = str_c("../data/", "02_world_population_cleaned.tsv"))
 ```

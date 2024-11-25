@@ -1,235 +1,235 @@
-"","Country/Territory","Continent","2022 Population","2020 Population","Growth Rate"
-"1","Afghanistan","Asia",41128771,38972230,1.0257
-"2","Albania","Europe",2842321,2866849,0.9957
-"3","Algeria","Africa",44903225,43451666,1.0164
-"4","American Samoa","Oceania",44273,46189,0.9831
-"5","Andorra","Europe",79824,77700,1.01
-"6","Angola","Africa",35588987,33428485,1.0315
-"7","Anguilla","North America",15857,15585,1.0066
-"8","Antigua and Barbuda","North America",93763,92664,1.0058
-"9","Argentina","South America",45510318,45036032,1.0052
-"10","Armenia","Asia",2780469,2805608,0.9962
-"11","Aruba","North America",106445,106585,0.9991
-"12","Australia","Oceania",26177413,25670051,1.0099
-"13","Austria","Europe",8939617,8907777,1.002
-"14","Azerbaijan","Asia",10358074,10284951,1.0044
-"15","Bahamas","North America",409984,406471,1.0051
-"16","Bahrain","Asia",1472233,1477469,1.0061
-"17","Bangladesh","Asia",171186372,167420951,1.0108
-"18","Barbados","North America",281635,280693,1.0015
-"19","Belarus","Europe",9534954,9633740,0.9955
-"20","Belgium","Europe",11655930,11561717,1.0038
-"21","Belize","North America",405272,394921,1.0131
-"22","Benin","Africa",13352864,12643123,1.0274
-"23","Bermuda","North America",64184,64031,1
-"24","Bhutan","Asia",782455,772506,1.0064
-"25","Bolivia","South America",12224110,11936162,1.012
-"26","Bosnia and Herzegovina","Europe",3233526,3318407,0.9886
-"27","Botswana","Africa",2630296,2546402,1.0162
-"28","Brazil","South America",215313498,213196304,1.0046
-"29","British Virgin Islands","North America",31305,30910,1.0059
-"30","Brunei","Asia",449002,441725,1.0081
-"31","Bulgaria","Europe",6781953,6979175,0.9849
-"32","Burkina Faso","Africa",22673762,21522626,1.0259
-"33","Burundi","Africa",12889576,12220227,1.027
-"34","Cambodia","Asia",16767842,16396860,1.0108
-"35","Cameroon","Africa",27914536,26491087,1.0263
-"36","Canada","North America",38454327,37888705,1.0078
-"37","Cape Verde","Africa",593149,582640,1.0089
-"38","Cayman Islands","North America",68706,67311,1.0084
-"39","Central African Republic","Africa",5579144,5343020,1.0224
-"40","Chad","Africa",17723315,16644701,1.0316
-"41","Chile","South America",19603733,19300315,1.0057
-"42","China","Asia",1425887337,1424929781,1
-"43","Colombia","South America",51874024,50930662,1.0069
-"44","Comoros","Africa",836774,806166,1.0184
-"45","Cook Islands","Oceania",17011,17029,1.0005
-"46","Costa Rica","North America",5180829,5123105,1.0052
-"47","Croatia","Europe",4030358,4096868,0.9927
-"48","Cuba","North America",11212191,11300698,0.9961
-"49","Curacao","North America",191163,189288,1.0043
-"50","Cyprus","Europe",1251488,1237537,1.0059
-"51","Czech Republic","Europe",10493986,10530953,0.9984
-"52","Denmark","Europe",5882261,5825641,1.0048
-"53","Djibouti","Africa",1120849,1090156,1.0138
-"54","Dominica","North America",72737,71995,1.0045
-"55","Dominican Republic","North America",11228821,10999664,1.01
-"56","DR Congo","Africa",99010212,92853164,1.0325
-"57","Ecuador","South America",18001000,17588595,1.0114
-"58","Egypt","Africa",110990103,107465134,1.0158
-"59","El Salvador","North America",6336392,6292731,1.0035
-"60","Equatorial Guinea","Africa",1674908,1596049,1.0247
-"61","Eritrea","Africa",3684032,3555868,1.0176
-"62","Estonia","Europe",1326062,1329444,0.998
-"63","Eswatini","Africa",1201670,1180655,1.0079
-"64","Ethiopia","Africa",123379924,117190911,1.0257
-"65","Falkland Islands","South America",3780,3747,1.0043
-"66","Faroe Islands","Europe",53090,52415,1.0038
-"67","Fiji","Oceania",929766,920422,1.0056
-"68","Finland","Europe",5540745,5529468,1.0009
-"69","France","Europe",64626628,64480053,1.0015
-"70","French Guiana","South America",304557,290969,1.0239
-"71","French Polynesia","Oceania",306279,301920,1.0074
-"72","Gabon","Africa",2388992,2292573,1.0204
-"73","Gambia","Africa",2705992,2573995,1.025
-"74","Georgia","Asia",3744385,3765912,0.9964
-"75","Germany","Europe",83369843,83328988,0.9995
-"76","Ghana","Africa",33475870,32180401,1.0196
-"77","Gibraltar","Europe",32649,32709,0.9994
-"78","Greece","Europe",10384971,10512232,0.9942
-"79","Greenland","North America",56466,56026,1.004
-"80","Grenada","North America",125438,123663,1.0066
-"81","Guadeloupe","North America",395752,395642,0.9992
-"82","Guam","Oceania",171774,169231,1.0073
-"83","Guatemala","North America",17843908,17362718,1.0134
-"84","Guernsey","Europe",63301,62794,1.0037
-"85","Guinea","Africa",13859341,13205153,1.0242
-"86","Guinea-Bissau","Africa",2105566,2015828,1.0218
-"87","Guyana","South America",808726,797202,1.0052
-"88","Haiti","North America",11584996,11306801,1.012
-"89","Honduras","North America",10432860,10121763,1.015
-"90","Hong Kong","Asia",7488865,7500958,0.9992
-"91","Hungary","Europe",9967308,9750573,1.0265
-"92","Iceland","Europe",372899,366669,1.0069
-"93","India","Asia",1417173173,1396387127,1.0068
-"94","Indonesia","Asia",275501339,271857970,1.0064
-"95","Iran","Asia",88550570,87290193,1.0071
-"96","Iraq","Asia",44496122,42556984,1.0221
-"97","Ireland","Europe",5023109,4946119,1.0073
-"98","Isle of Man","Europe",84519,84046,1.003
-"99","Israel","Asia",9038309,8757489,1.0155
-"100","Italy","Europe",59037474,59500579,0.9966
-"101","Ivory Coast","Africa",28160542,26811790,1.0248
-"102","Jamaica","North America",2827377,2820436,0.9999
-"103","Japan","Asia",123951692,125244761,0.9947
-"104","Jersey","Europe",110778,108319,1.0106
-"105","Jordan","Asia",11285869,10928721,1.0123
-"106","Kazakhstan","Asia",19397998,18979243,1.0105
-"107","Kenya","Africa",54027487,51985780,1.0193
-"108","Kiribati","Oceania",131232,126463,1.0183
-"109","Kuwait","Asia",4268873,4360444,1.0044
-"110","Kyrgyzstan","Asia",6630623,6424874,1.0158
-"111","Laos","Asia",7529475,7319399,1.0141
-"112","Latvia","Europe",1850651,1897052,0.9876
-"113","Lebanon","Asia",5489739,5662923,0.9816
-"114","Lesotho","Africa",2305825,2254100,1.0107
-"115","Liberia","Africa",5302681,5087584,1.021
-"116","Libya","Africa",6812341,6653942,1.0114
-"117","Liechtenstein","Europe",39327,38756,1.0074
-"118","Lithuania","Europe",2750055,2820267,0.9869
-"119","Luxembourg","Europe",647599,630399,1.0129
-"120","Macau","Asia",695168,676283,1.0125
-"121","Madagascar","Africa",29611714,28225177,1.0241
-"122","Malawi","Africa",20405317,19377061,1.0259
-"123","Malaysia","Asia",33938221,33199993,1.0109
-"124","Maldives","Asia",523787,514438,1.0045
-"125","Mali","Africa",22593590,21224040,1.0314
-"126","Malta","Europe",533286,515357,1.0124
-"127","Marshall Islands","Oceania",41569,43413,0.9886
-"128","Martinique","North America",367507,370391,0.9965
-"129","Mauritania","Africa",4736139,4498604,1.0263
-"130","Mauritius","Africa",1299469,1297828,1.0004
-"131","Mayotte","Africa",326101,305587,1.0319
-"132","Mexico","North America",127504125,125998302,1.0063
-"133","Micronesia","Oceania",114164,112106,1.0091
-"134","Moldova","Europe",3272996,3084847,1.0691
-"135","Monaco","Europe",36469,36922,0.9941
-"136","Mongolia","Asia",3398366,3294335,1.0151
-"137","Montenegro","Europe",627082,629048,0.9988
-"138","Montserrat","North America",4390,4500,0.9939
-"139","Morocco","Africa",37457971,36688772,1.0103
-"140","Mozambique","Africa",32969517,31178239,1.0278
-"141","Myanmar","Asia",54179306,53423198,1.0071
-"142","Namibia","Africa",2567012,2489098,1.0146
-"143","Nauru","Oceania",12668,12315,1.0125
-"144","Nepal","Asia",30547580,29348627,1.0171
-"145","Netherlands","Europe",17564014,17434557,1.0036
-"146","New Caledonia","Oceania",289950,286403,1.0075
-"147","New Zealand","Oceania",5185288,5061133,1.0108
-"148","Nicaragua","North America",6948392,6755895,1.0143
-"149","Niger","Africa",26207977,24333639,1.0378
-"150","Nigeria","Africa",218541212,208327405,1.0241
-"151","Niue","Oceania",1934,1942,0.9985
-"152","North Korea","Asia",26069416,25867467,1.0038
-"153","North Macedonia","Europe",2093599,2111072,0.9954
-"154","Northern Mariana Islands","Oceania",49551,49587,1.0014
-"155","Norway","Europe",5434319,5379839,1.0058
-"156","Oman","Asia",4576298,4543399,1.0123
-"157","Pakistan","Asia",235824862,227196741,1.0191
-"158","Palau","Oceania",18055,17972,1.0017
-"159","Palestine","Asia",5250072,5019401,1.0227
-"160","Panama","North America",4408581,4294396,1.0132
-"161","Papua New Guinea","Oceania",10142619,9749640,1.0194
-"162","Paraguay","South America",6780744,6618695,1.0115
-"163","Peru","South America",34049588,33304756,1.0099
-"164","Philippines","Asia",115559009,112190977,1.0147
-"165","Poland","Europe",39857145,38428366,1.0404
-"166","Portugal","Europe",10270865,10298192,0.9981
-"167","Puerto Rico","North America",3252407,3271564,0.9989
-"168","Qatar","Asia",2695122,2760385,1.0026
-"169","Republic of the Congo","Africa",5970424,5702174,1.0231
-"170","Reunion","Africa",974052,957822,1.0082
-"171","Romania","Europe",19659267,19442038,1.0171
-"172","Russia","Europe",144713314,145617329,0.9973
-"173","Rwanda","Africa",13776698,13146362,1.0234
-"174","Saint Barthelemy","North America",10967,10681,1.0098
-"175","Saint Kitts and Nevis","North America",47657,47642,1.0011
-"176","Saint Lucia","North America",179857,179237,1.0011
-"177","Saint Martin","North America",31791,32552,0.9951
-"178","Saint Pierre and Miquelon","North America",5862,5906,0.9964
-"179","Saint Vincent and the Grenadines","North America",103948,104632,0.9963
-"180","Samoa","Oceania",222382,214929,1.0165
-"181","San Marino","Europe",33660,34007,0.9975
-"182","Sao Tome and Principe","Africa",227380,218641,1.0192
-"183","Saudi Arabia","Asia",36408820,35997107,1.0128
-"184","Senegal","Africa",17316449,16436119,1.0261
-"185","Serbia","Europe",7221365,7358005,0.9897
-"186","Seychelles","Africa",107118,105530,1.0061
-"187","Sierra Leone","Africa",8605718,8233969,1.022
-"188","Singapore","Asia",5975689,5909869,1.0058
-"189","Sint Maarten","North America",44175,43621,1.003
-"190","Slovakia","Europe",5643453,5456681,1.0359
-"191","Slovenia","Europe",2119844,2117641,1.0002
-"192","Solomon Islands","Oceania",724273,691191,1.0232
-"193","Somalia","Africa",17597511,16537016,1.0312
-"194","South Africa","Africa",59893885,58801927,1.0084
-"195","South Korea","Asia",51815810,51844690,0.9997
-"196","South Sudan","Africa",10913164,10606227,1.0153
-"197","Spain","Europe",47558630,47363807,1.0015
-"198","Sri Lanka","Asia",21832143,21715079,1.0027
-"199","Sudan","Africa",46874204,44440486,1.0267
-"200","Suriname","South America",618040,607065,1.0082
-"201","Sweden","Europe",10549347,10368969,1.0079
-"202","Switzerland","Europe",8740472,8638613,1.0056
-"203","Syria","Asia",22125249,20772595,1.0376
-"204","Taiwan","Asia",23893394,23821464,1.0014
-"205","Tajikistan","Asia",9952787,9543207,1.0208
-"206","Tanzania","Africa",65497748,61704518,1.03
-"207","Thailand","Asia",71697030,71475664,1.0013
-"208","Timor-Leste","Asia",1341296,1299995,1.0154
-"209","Togo","Africa",8848699,8442580,1.0236
-"210","Tokelau","Oceania",1871,1827,1.0119
-"211","Tonga","Oceania",106858,105254,1.0079
-"212","Trinidad and Tobago","North America",1531044,1518147,1.0035
-"213","Tunisia","Africa",12356117,12161723,1.0076
-"214","Turkey","Asia",85341241,84135428,1.0067
-"215","Turkmenistan","Asia",6430770,6250438,1.014
-"216","Turks and Caicos Islands","North America",45703,44276,1.0131
-"217","Tuvalu","Oceania",11312,11069,1.0096
-"218","Uganda","Africa",47249585,44404611,1.0304
-"219","Ukraine","Europe",39701739,43909666,0.912
-"220","United Arab Emirates","Asia",9441129,9287289,1.0081
-"221","United Kingdom","Europe",67508936,67059474,1.0034
-"222","United States","North America",338289857,335942003,1.0038
-"223","United States Virgin Islands","North America",99465,100442,0.9937
-"224","Uruguay","South America",3422794,3429086,0.999
-"225","Uzbekistan","Asia",34627652,33526656,1.016
-"226","Vanuatu","Oceania",326740,311685,1.0238
-"227","Vatican City","Europe",510,520,0.998
-"228","Venezuela","South America",28301696,28490453,1.0036
-"229","Vietnam","Asia",98186856,96648685,1.0074
-"230","Wallis and Futuna","Oceania",11572,11655,0.9953
-"231","Western Sahara","Africa",575986,556048,1.0184
-"232","Yemen","Asia",33696614,32284046,1.0217
-"233","Zambia","Africa",20017675,18927715,1.028
-"234","Zimbabwe","Africa",16320537,15669666,1.0204
+Country/Territory	Continent	2022 Population	2020 Population	Growth Rate
+Afghanistan	Asia	41128771	38972230	1.0257
+Albania	Europe	2842321	2866849	0.9957
+Algeria	Africa	44903225	43451666	1.0164
+American Samoa	Oceania	44273	46189	0.9831
+Andorra	Europe	79824	77700	1.01
+Angola	Africa	35588987	33428485	1.0315
+Anguilla	North America	15857	15585	1.0066
+Antigua and Barbuda	North America	93763	92664	1.0058
+Argentina	South America	45510318	45036032	1.0052
+Armenia	Asia	2780469	2805608	0.9962
+Aruba	North America	106445	106585	0.9991
+Australia	Oceania	26177413	25670051	1.0099
+Austria	Europe	8939617	8907777	1.002
+Azerbaijan	Asia	10358074	10284951	1.0044
+Bahamas	North America	409984	406471	1.0051
+Bahrain	Asia	1472233	1477469	1.0061
+Bangladesh	Asia	171186372	167420951	1.0108
+Barbados	North America	281635	280693	1.0015
+Belarus	Europe	9534954	9633740	0.9955
+Belgium	Europe	11655930	11561717	1.0038
+Belize	North America	405272	394921	1.0131
+Benin	Africa	13352864	12643123	1.0274
+Bermuda	North America	64184	64031	1
+Bhutan	Asia	782455	772506	1.0064
+Bolivia	South America	12224110	11936162	1.012
+Bosnia and Herzegovina	Europe	3233526	3318407	0.9886
+Botswana	Africa	2630296	2546402	1.0162
+Brazil	South America	215313498	213196304	1.0046
+British Virgin Islands	North America	31305	30910	1.0059
+Brunei	Asia	449002	441725	1.0081
+Bulgaria	Europe	6781953	6979175	0.9849
+Burkina Faso	Africa	22673762	21522626	1.0259
+Burundi	Africa	12889576	12220227	1.027
+Cambodia	Asia	16767842	16396860	1.0108
+Cameroon	Africa	27914536	26491087	1.0263
+Canada	North America	38454327	37888705	1.0078
+Cape Verde	Africa	593149	582640	1.0089
+Cayman Islands	North America	68706	67311	1.0084
+Central African Republic	Africa	5579144	5343020	1.0224
+Chad	Africa	17723315	16644701	1.0316
+Chile	South America	19603733	19300315	1.0057
+China	Asia	1425887337	1424929781	1
+Colombia	South America	51874024	50930662	1.0069
+Comoros	Africa	836774	806166	1.0184
+Cook Islands	Oceania	17011	17029	1.0005
+Costa Rica	North America	5180829	5123105	1.0052
+Croatia	Europe	4030358	4096868	0.9927
+Cuba	North America	11212191	11300698	0.9961
+Curacao	North America	191163	189288	1.0043
+Cyprus	Europe	1251488	1237537	1.0059
+Czech Republic	Europe	10493986	10530953	0.9984
+Denmark	Europe	5882261	5825641	1.0048
+Djibouti	Africa	1120849	1090156	1.0138
+Dominica	North America	72737	71995	1.0045
+Dominican Republic	North America	11228821	10999664	1.01
+DR Congo	Africa	99010212	92853164	1.0325
+Ecuador	South America	18001000	17588595	1.0114
+Egypt	Africa	110990103	107465134	1.0158
+El Salvador	North America	6336392	6292731	1.0035
+Equatorial Guinea	Africa	1674908	1596049	1.0247
+Eritrea	Africa	3684032	3555868	1.0176
+Estonia	Europe	1326062	1329444	0.998
+Eswatini	Africa	1201670	1180655	1.0079
+Ethiopia	Africa	123379924	117190911	1.0257
+Falkland Islands	South America	3780	3747	1.0043
+Faroe Islands	Europe	53090	52415	1.0038
+Fiji	Oceania	929766	920422	1.0056
+Finland	Europe	5540745	5529468	1.0009
+France	Europe	64626628	64480053	1.0015
+French Guiana	South America	304557	290969	1.0239
+French Polynesia	Oceania	306279	301920	1.0074
+Gabon	Africa	2388992	2292573	1.0204
+Gambia	Africa	2705992	2573995	1.025
+Georgia	Asia	3744385	3765912	0.9964
+Germany	Europe	83369843	83328988	0.9995
+Ghana	Africa	33475870	32180401	1.0196
+Gibraltar	Europe	32649	32709	0.9994
+Greece	Europe	10384971	10512232	0.9942
+Greenland	North America	56466	56026	1.004
+Grenada	North America	125438	123663	1.0066
+Guadeloupe	North America	395752	395642	0.9992
+Guam	Oceania	171774	169231	1.0073
+Guatemala	North America	17843908	17362718	1.0134
+Guernsey	Europe	63301	62794	1.0037
+Guinea	Africa	13859341	13205153	1.0242
+Guinea-Bissau	Africa	2105566	2015828	1.0218
+Guyana	South America	808726	797202	1.0052
+Haiti	North America	11584996	11306801	1.012
+Honduras	North America	10432860	10121763	1.015
+Hong Kong	Asia	7488865	7500958	0.9992
+Hungary	Europe	9967308	9750573	1.0265
+Iceland	Europe	372899	366669	1.0069
+India	Asia	1417173173	1396387127	1.0068
+Indonesia	Asia	275501339	271857970	1.0064
+Iran	Asia	88550570	87290193	1.0071
+Iraq	Asia	44496122	42556984	1.0221
+Ireland	Europe	5023109	4946119	1.0073
+Isle of Man	Europe	84519	84046	1.003
+Israel	Asia	9038309	8757489	1.0155
+Italy	Europe	59037474	59500579	0.9966
+Ivory Coast	Africa	28160542	26811790	1.0248
+Jamaica	North America	2827377	2820436	0.9999
+Japan	Asia	123951692	125244761	0.9947
+Jersey	Europe	110778	108319	1.0106
+Jordan	Asia	11285869	10928721	1.0123
+Kazakhstan	Asia	19397998	18979243	1.0105
+Kenya	Africa	54027487	51985780	1.0193
+Kiribati	Oceania	131232	126463	1.0183
+Kuwait	Asia	4268873	4360444	1.0044
+Kyrgyzstan	Asia	6630623	6424874	1.0158
+Laos	Asia	7529475	7319399	1.0141
+Latvia	Europe	1850651	1897052	0.9876
+Lebanon	Asia	5489739	5662923	0.9816
+Lesotho	Africa	2305825	2254100	1.0107
+Liberia	Africa	5302681	5087584	1.021
+Libya	Africa	6812341	6653942	1.0114
+Liechtenstein	Europe	39327	38756	1.0074
+Lithuania	Europe	2750055	2820267	0.9869
+Luxembourg	Europe	647599	630399	1.0129
+Macau	Asia	695168	676283	1.0125
+Madagascar	Africa	29611714	28225177	1.0241
+Malawi	Africa	20405317	19377061	1.0259
+Malaysia	Asia	33938221	33199993	1.0109
+Maldives	Asia	523787	514438	1.0045
+Mali	Africa	22593590	21224040	1.0314
+Malta	Europe	533286	515357	1.0124
+Marshall Islands	Oceania	41569	43413	0.9886
+Martinique	North America	367507	370391	0.9965
+Mauritania	Africa	4736139	4498604	1.0263
+Mauritius	Africa	1299469	1297828	1.0004
+Mayotte	Africa	326101	305587	1.0319
+Mexico	North America	127504125	125998302	1.0063
+Micronesia	Oceania	114164	112106	1.0091
+Moldova	Europe	3272996	3084847	1.0691
+Monaco	Europe	36469	36922	0.9941
+Mongolia	Asia	3398366	3294335	1.0151
+Montenegro	Europe	627082	629048	0.9988
+Montserrat	North America	4390	4500	0.9939
+Morocco	Africa	37457971	36688772	1.0103
+Mozambique	Africa	32969517	31178239	1.0278
+Myanmar	Asia	54179306	53423198	1.0071
+Namibia	Africa	2567012	2489098	1.0146
+Nauru	Oceania	12668	12315	1.0125
+Nepal	Asia	30547580	29348627	1.0171
+Netherlands	Europe	17564014	17434557	1.0036
+New Caledonia	Oceania	289950	286403	1.0075
+New Zealand	Oceania	5185288	5061133	1.0108
+Nicaragua	North America	6948392	6755895	1.0143
+Niger	Africa	26207977	24333639	1.0378
+Nigeria	Africa	218541212	208327405	1.0241
+Niue	Oceania	1934	1942	0.9985
+North Korea	Asia	26069416	25867467	1.0038
+North Macedonia	Europe	2093599	2111072	0.9954
+Northern Mariana Islands	Oceania	49551	49587	1.0014
+Norway	Europe	5434319	5379839	1.0058
+Oman	Asia	4576298	4543399	1.0123
+Pakistan	Asia	235824862	227196741	1.0191
+Palau	Oceania	18055	17972	1.0017
+Palestine	Asia	5250072	5019401	1.0227
+Panama	North America	4408581	4294396	1.0132
+Papua New Guinea	Oceania	10142619	9749640	1.0194
+Paraguay	South America	6780744	6618695	1.0115
+Peru	South America	34049588	33304756	1.0099
+Philippines	Asia	115559009	112190977	1.0147
+Poland	Europe	39857145	38428366	1.0404
+Portugal	Europe	10270865	10298192	0.9981
+Puerto Rico	North America	3252407	3271564	0.9989
+Qatar	Asia	2695122	2760385	1.0026
+Republic of the Congo	Africa	5970424	5702174	1.0231
+Reunion	Africa	974052	957822	1.0082
+Romania	Europe	19659267	19442038	1.0171
+Russia	Europe	144713314	145617329	0.9973
+Rwanda	Africa	13776698	13146362	1.0234
+Saint Barthelemy	North America	10967	10681	1.0098
+Saint Kitts and Nevis	North America	47657	47642	1.0011
+Saint Lucia	North America	179857	179237	1.0011
+Saint Martin	North America	31791	32552	0.9951
+Saint Pierre and Miquelon	North America	5862	5906	0.9964
+Saint Vincent and the Grenadines	North America	103948	104632	0.9963
+Samoa	Oceania	222382	214929	1.0165
+San Marino	Europe	33660	34007	0.9975
+Sao Tome and Principe	Africa	227380	218641	1.0192
+Saudi Arabia	Asia	36408820	35997107	1.0128
+Senegal	Africa	17316449	16436119	1.0261
+Serbia	Europe	7221365	7358005	0.9897
+Seychelles	Africa	107118	105530	1.0061
+Sierra Leone	Africa	8605718	8233969	1.022
+Singapore	Asia	5975689	5909869	1.0058
+Sint Maarten	North America	44175	43621	1.003
+Slovakia	Europe	5643453	5456681	1.0359
+Slovenia	Europe	2119844	2117641	1.0002
+Solomon Islands	Oceania	724273	691191	1.0232
+Somalia	Africa	17597511	16537016	1.0312
+South Africa	Africa	59893885	58801927	1.0084
+South Korea	Asia	51815810	51844690	0.9997
+South Sudan	Africa	10913164	10606227	1.0153
+Spain	Europe	47558630	47363807	1.0015
+Sri Lanka	Asia	21832143	21715079	1.0027
+Sudan	Africa	46874204	44440486	1.0267
+Suriname	South America	618040	607065	1.0082
+Sweden	Europe	10549347	10368969	1.0079
+Switzerland	Europe	8740472	8638613	1.0056
+Syria	Asia	22125249	20772595	1.0376
+Taiwan	Asia	23893394	23821464	1.0014
+Tajikistan	Asia	9952787	9543207	1.0208
+Tanzania	Africa	65497748	61704518	1.03
+Thailand	Asia	71697030	71475664	1.0013
+Timor-Leste	Asia	1341296	1299995	1.0154
+Togo	Africa	8848699	8442580	1.0236
+Tokelau	Oceania	1871	1827	1.0119
+Tonga	Oceania	106858	105254	1.0079
+Trinidad and Tobago	North America	1531044	1518147	1.0035
+Tunisia	Africa	12356117	12161723	1.0076
+Turkey	Asia	85341241	84135428	1.0067
+Turkmenistan	Asia	6430770	6250438	1.014
+Turks and Caicos Islands	North America	45703	44276	1.0131
+Tuvalu	Oceania	11312	11069	1.0096
+Uganda	Africa	47249585	44404611	1.0304
+Ukraine	Europe	39701739	43909666	0.912
+United Arab Emirates	Asia	9441129	9287289	1.0081
+United Kingdom	Europe	67508936	67059474	1.0034
+United States	North America	338289857	335942003	1.0038
+United States Virgin Islands	North America	99465	100442	0.9937
+Uruguay	South America	3422794	3429086	0.999
+Uzbekistan	Asia	34627652	33526656	1.016
+Vanuatu	Oceania	326740	311685	1.0238
+Vatican City	Europe	510	520	0.998
+Venezuela	South America	28301696	28490453	1.0036
+Vietnam	Asia	98186856	96648685	1.0074
+Wallis and Futuna	Oceania	11572	11655	0.9953
+Western Sahara	Africa	575986	556048	1.0184
+Yemen	Asia	33696614	32284046	1.0217
+Zambia	Africa	20017675	18927715	1.028
+Zimbabwe	Africa	16320537	15669666	1.0204
