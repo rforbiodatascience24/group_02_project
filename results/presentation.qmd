@@ -1,9 +1,8 @@
 ---
 title: "presentation"
-format: 
-  revealjs:
-    footer: R for bio data science E24 project presentation
-    transition: fade
+format: revealjs
+    #footer: R for bio data science E24 project presentation
+    #transition: fade
 ---
 
 ## Quarto
