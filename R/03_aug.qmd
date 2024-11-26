@@ -52,7 +52,20 @@ aug_world_population <- clean_world_population |>
          `2022 Population`,
          `2021 Population`, 
          `2020 Population`) |> 
-  rename(`Country` = `Country/Territory`)
+  rename(`Country` = `Country/Territory`) |> 
+  pivot_longer(cols = starts_with("20"), # Columns starting with 20 pivot longer
+               names_to = "Year", # New variable name "Year"
+               values_to = "Population") |> # Variable for value added, named "Population"
+  mutate(Year = as.numeric(str_remove(Year, " Population"))) # Remove the word "Population"
+
+```
+
+We make changes to the manufacturer data:
+
+```{r}
+# Making a new column for joining
+aug_manufacturer <- clean_manufacturer |> # Making sure that year is a column that matches the date
+  mutate(Year = as.numeric(format(date, "%Y")))
 ```
 
 Now we join the data:
@@ -62,10 +75,12 @@ Now we join the data:
 ## Vaccine and world population
 
 ## Manufacture and world population
-manufacturer_world_pop <- clean_manufacturer |> 
+manufacturer_world_pop <- aug_manufacturer |> 
   rename(`Country` = location) |> # Renaming location
   left_join(aug_world_population,
-            by = "Country")
+            by = c("Country", "Year")) |> # Joining based on Country and Year
+  # Changing order of column
+  select(`Country`, `date`, `Year`, `Population`, `vaccine`, `total_vaccinations`) 
 ```
 
 Further manipulation, first of with manufacturer and world population data:
@@ -83,23 +98,15 @@ manufacturer_world_pop <- manufacturer_world_pop |>
 
 ```
 
-We have decided that we want to pivot the populations so they become longer, and then we can make a data set/database:
+Writing files:
 
 ```{r}
-# Pivoting the population in seperate variable 
-population_data <-  manufacturer_world_pop |> 
-  pivot_longer(cols = starts_with("20"), # Columns starting with 20 pivot longer
-               names_to = "Year", # New variable name "Year"
-               values_to = "Population") |> # Variable for value added, named "Population"
-  mutate(Year = as.numeric(str_remove(Year, " Population"))) # Remove the word "Population"
+# Writing 03_aug files
+## Manufacturer and world population data
+write_tsv(x = manufacturer_world_pop,
+          file = str_c("../data/", "03_manufacturer_world_population_aug.tsv"))
 
-# Extracting Year informantion from the date and making a variable showing the year
-manufacturer_world_pop <- manufacturer_world_pop |> 
-  mutate(Year = as.numeric(format(date, "%Y")))
-
-# Joining the population data with the new manufacturer world population data
-manufacturer_world_pop <- manufacturer_world_pop |> 
-  left_join(population_data, c("Country", "Year")) # Joining based on country and year
-
-
+## Vaccnies and world population data
+#write_tsv(x = vaccines_cleaned,
+         # file = str_c("../data/", "02_vaccines_cleaned.tsv"))
 ```
