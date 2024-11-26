@@ -1,0 +1,99 @@
+---
+title: "animation traik"
+author: "Fabrice Tangih"
+format: html
+editor: visual
+---
+
+## loading library
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+```
+
+## loading datasets
+
+```{r}
+#| echo: false
+manufacturer_world_population_aug <- read_tsv("data/03_manufacturer_world_population_aug.tsv")
+View(manufacturer_world_population_aug)
+```
+
+## installing needed package for animations
+
+```{r}
+#| echo: false
+install.packages("gganimate")
+install.packages("gifski")
+install.packages("av")
+```
+
+## Loading the gganimate package
+
+```{r}
+library(gifski)
+library(av)
+library(gganimate)
+```
+
+
+## visualising the data
+
+```{r}
+filtered_manufacturer_world_population_aug <- manufacturer_world_population_aug |> 
+  filter(Country == c("Latvia", "Denmark", "France")) 
+
+plot <- ggplot(data = filtered_manufacturer_world_population_aug, 
+       aes(x =date, 
+           y =  `Vaccinated people pr country`, 
+           size = `Population`, 
+           color = `Country`)) +
+  geom_point(alpha = 0.5) +
+  labs(title = "Per-Capita Vaccination Analysis",
+       x = "Year",
+       y = "Total Vaccinations per Country")
+
+```
+
+ 
+## Adding animation to the plot 
+
+```{r}
+animated_plot <- plot + 
+transition_time(date) +
+ease_aes('linear')  # provides a smooth transition of the plot over time by transitioning through the date column
+
+animate(animated_plot, 
+        nframes = 100, 
+        fps = 10, 
+        width = 800, 
+        height = 600, 
+        renderer = gifski_renderer("animated_plot.gif")) ## saves the animation
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
