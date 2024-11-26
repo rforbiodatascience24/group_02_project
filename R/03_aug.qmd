@@ -96,6 +96,9 @@ manufacturer_world_pop <- manufacturer_world_pop |>
 manufacturer_world_pop <- manufacturer_world_pop |>
   mutate(`Vaccinated people pr country` = round(`Vaccinations pr country`/2,0))
 
+# Calculating the percentage of the population who has been vaccinated
+manufacturer_world_pop <- manufacturer_world_pop |> 
+  mutate(`Percentage Vaccinated` =(`Vaccinated people pr country`/`Population`)*100)
 ```
 
 Writing files:
