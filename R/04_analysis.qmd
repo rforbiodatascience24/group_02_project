@@ -6,5 +6,47 @@ editor: visual
 
 ## Analysis and plots
 
+<<<<<<< HEAD
 ```         
+=======
+First of we'd like to make a heat map over the world when taking vaccine amount in to account.
+
+We load necessary libraries:
+
+```{r}
+# Libraries
+library(tidyverse)
+library(scales)
+```
+
+Load the data:
+
+```{r}
+# Loading data
+manufac_wolrd_pop <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
+```
+
+bla bla
+
+```{r}
+# Creating a heat map based on the percentage vaccinated pr country in the data set
+ggplot(manufac_wolrd_pop, aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
+  geom_polygon(color = "black", size = 0.2) +
+  scale_fill_gradient(low = "lightblue", high = "darkblue", na.value = "grey50", name = "Vaccination %") +
+  theme_minimal() +
+  labs(
+    title = "Vaccination Percentage by Country",
+    subtitle = "Countries color-coded by vaccination percentage. Grey countries not included.",
+    caption = "Data Source: Kaggle",
+    x = "hello",
+    y = "hello"
+    
+  ) +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  )
+>>>>>>> 8f5d76b4d1ea8f8908d8a3f7d60c418cecaa0e5e
 ```

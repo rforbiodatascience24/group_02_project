@@ -15,6 +15,7 @@ The manufacturer data and vaccine data contains a lot of the same information, t
 # Loading libraries
 library(tidyverse)
 library(dplyr)
+library(readr)
 ```
 
 We will join the vaccine data and the world population data and making some new variables. But first we load the clean data:
@@ -90,7 +91,8 @@ Further manipulation, first of with manufacturer and world population data:
 manufacturer_world_pop <- manufacturer_world_pop |> 
   group_by(Country) |> # Grouping by country and taking to sum of all vaccinations
   arrange(date) |> # Making the tibble cronological 
-  mutate(`Vaccinations pr country` = cumsum(total_vaccinations)) # Cumulative sum
+  mutate(`Vaccinations pr country` = cumsum(total_vaccinations)) |>  # Cumulative sum
+  ungroup()
 
 # Finding the total amount of people vaccinated pr country - 2 vaccination pr person
 manufacturer_world_pop <- manufacturer_world_pop |>
@@ -101,6 +103,18 @@ manufacturer_world_pop <- manufacturer_world_pop |>
   mutate(`Percentage Vaccinated` =(`Vaccinated people pr country`/`Population`)*100)
 ```
 
+We want to make a heat map of the world, so we need an additional library and join that to the data.
+
+```{r}
+# Loading lirbary
+library(maps)
+world_map <- map_data("world")
+
+# Join to excisting data
+manufacturer_world_pop <- world_map |> 
+  left_join(manufacturer_world_pop, by = c("region" = "Country"))
+```
+
 Writing files:
 
 ```{r}
@@ -108,7 +122,6 @@ Writing files:
 ## Manufacturer and world population data
 write_tsv(x = manufacturer_world_pop,
           file = str_c("../data/", "03_manufacturer_world_population_aug.tsv"))
-
 ## Vaccnies and world population data
 #write_tsv(x = vaccines_cleaned,
          # file = str_c("../data/", "02_vaccines_cleaned.tsv"))
