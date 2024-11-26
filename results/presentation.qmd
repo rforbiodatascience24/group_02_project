@@ -1,7 +1,9 @@
 ---
 title: "presentation"
-format: revealjs
-editor: visual
+format: 
+  revealjs:
+    footer: R for bio data science E24 project presentation
+    transition: fade
 ---
 
 ## Quarto
@@ -15,10 +17,24 @@ When you click the **Render** button a document will be generated that includes:
 -   Content authored with markdown
 -   Output from executable code
 
-## Code
+## Introduction
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+tekst tekst tekst
 
-```{r}
-1 + 1
-```
+## Materials and methods
+
+tekst tekst
+
+## Results
+
+Tekst tekst tekst
+
+## Analysis
+
+tekst tekst
+
+tekst
+
+## Discussion
+
+tekst tekst tekst
