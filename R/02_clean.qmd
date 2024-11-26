@@ -13,6 +13,7 @@ editor: visual
 # Loading libraries 
 library(tidyverse)
 library(dplyr)
+library(readr)
 ```
 
 We load the dataset

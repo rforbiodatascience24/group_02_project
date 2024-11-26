@@ -90,7 +90,8 @@ Further manipulation, first of with manufacturer and world population data:
 manufacturer_world_pop <- manufacturer_world_pop |> 
   group_by(Country) |> # Grouping by country and taking to sum of all vaccinations
   arrange(date) |> # Making the tibble cronological 
-  mutate(`Vaccinations pr country` = cumsum(total_vaccinations)) # Cumulative sum
+  mutate(`Vaccinations pr country` = cumsum(total_vaccinations)) |>  # Cumulative sum
+  ungroup()
 
 # Finding the total amount of people vaccinated pr country - 2 vaccination pr person
 manufacturer_world_pop <- manufacturer_world_pop |>
