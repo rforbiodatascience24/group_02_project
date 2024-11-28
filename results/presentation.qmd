@@ -7,7 +7,6 @@ format:
     transition: slide
 ---
 
-
 ## Introduction
 
 tekst tekst tekst
