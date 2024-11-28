@@ -10,13 +10,6 @@ First of we'd like to make a heat map over the world when taking vaccine amount 
 
 We load necessary libraries:
 
-<<<<<<< HEAD
-`{r} # Libraries library(tidyverse) library(scales)}`
-
-Load the data:
-
-`{r} # Loading data manufac_wolrd_pop <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")}`
-=======
 ```{r}
 library(tidyverse)
 library(scales)
