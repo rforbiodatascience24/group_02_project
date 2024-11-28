@@ -57,11 +57,8 @@ Plot <- ggplot(filtered_data, aes(x = date, y = total_vaccinations, color = Coun
 
 Now this plot needs to be put into the folder results:
 
-## Manufacturer and world population data
-
 ```{r}
 # Using ggsave to save the picture as a png to the correct path. 
-
 ggsave(filename = "../data/vaccination_progression.png", plot = Plot, width = 10, height = 6, dpi = 300)
 
 ```
