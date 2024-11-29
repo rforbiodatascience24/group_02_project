@@ -103,18 +103,6 @@ manufacturer_world_pop <- manufacturer_world_pop |>
   mutate(`Percentage Vaccinated` =(`Vaccinated people pr country`/`Population`)*100)
 ```
 
-We want to make a heat map of the world, so we need an additional library and join that to the data.
-
-```{r}
-# Loading lirbary
-library(maps)
-world_map <- map_data("world")
-
-# Join to excisting data
-manufacturer_world_pop <- world_map |> 
-  left_join(manufacturer_world_pop, by = c("region" = "Country"))
-```
-
 Writing files:
 
 ```{r}

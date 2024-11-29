@@ -55,7 +55,6 @@ Vaccinated_by_country_all_vaccines <- manufacturer_data %>%
 
 ```{r}
 
-
 ggplot(world_map_vaccinated, aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
   geom_polygon(color = "black", size = 0.2) +
   scale_fill_gradient(low = "lightblue", high = "darkblue", na.value = "grey50", name = "Vaccination %") +
@@ -74,9 +73,5 @@ ggplot(world_map_vaccinated, aes(x = long, y = lat, group = group, fill = `Perce
     panel.grid = element_blank(),
     legend.position = "bottom"
   )
-
-
-
-
 
 ```
