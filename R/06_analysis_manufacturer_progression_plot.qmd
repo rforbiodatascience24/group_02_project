@@ -1,0 +1,73 @@
+---
+title: "06_analysis_manufacturer_progression_plot.qmd"
+format: html
+editor: visual
+---
+
+## Progression of the different vaccines based on countries
+
+We would like to see the differences of countries choices of vaccine and see if some vaccines were especially popular. We can also make some general comparisons between the different continents.
+
+First we load libraries:
+
+```{r}
+#| echo: false 
+library(tidyverse)
+```
+
+We load data:
+
+```{r}
+#| echo: false 
+data <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
+```
+
+Now we can make a plot based on the dates on the x-axis and amount of each vaccine on the y-axis:
+
+```{r}
+# Plotting: 
+## Denmark the first 4 months of 2021
+p1 <- data |> 
+  filter(Country == "Denmark",
+         date >= "2021-01-01" & date <= "2021-04-01") |> 
+  ggplot(aes(x = date,
+             y = total_vaccinations,
+             color = vaccine)) +
+  geom_line(aes(group = vaccine)) 
+
+p1
+## Denmark 
+p2 <- data |> 
+  filter(Country == "Denmark") |> 
+  ggplot(aes(x = date,
+             y = total_vaccinations,
+             color = vaccine)) +
+  geom_line(aes(group = vaccine)) 
+
+p2
+## Argentina 
+p3 <- data |> 
+  filter(Country == "Argentina") |> 
+  ggplot(aes(x = date,
+             y = total_vaccinations,
+             color = vaccine)) +
+  geom_line(aes(group = vaccine)) 
+p3
+## Germany the first 4 months of 2021
+p4 <- data |> 
+  filter(Country == "Germany",
+         date >= "2021-01-01" & date <= "2021-04-01") |> 
+  ggplot(aes(x = date,
+             y = total_vaccinations,
+             color = vaccine)) +
+  geom_line(aes(group = vaccine)) 
+p4
+## Germany
+p5 <- data |> 
+  filter(Country == "Germany") |> 
+  ggplot(aes(x = date,
+             y = total_vaccinations,
+             color = vaccine)) +
+  geom_line(aes(group = vaccine)) 
+p5
+```

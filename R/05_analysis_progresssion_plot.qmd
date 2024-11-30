@@ -2,6 +2,7 @@
 title: "05_analysis_progression_plot"
 format: html
 editor: visual
+---use
 ---
 
 ## Progression plots of different countries' cumulative vaccination amounts
@@ -12,7 +13,7 @@ I want to take X number of different countries to see the development of the num
 library(tidyverse)
 
 # Load the dataset that we've used before. 
-data <- manufac_world_pop
+data <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
 
 # Prepare the data. Filtering so we get those countries we want to include in the plot. Making sure that they're somewhat near each other, so that it's possible to see them all, without some of the graphs becoming to small. 
 filtered_data <- data %>%

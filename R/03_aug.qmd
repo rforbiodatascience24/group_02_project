@@ -16,9 +16,18 @@ The manufacturer data and vaccine data contains a lot of the same information, t
 library(tidyverse)
 library(dplyr)
 library(readr)
+library(httr)
 ```
 
-We will join the vaccine data and the world population data and making some new variables. But first we load the clean data:
+We will join the vaccine data and the world population data and making some new variables. But you have to download three files:
+
+From:
+
+![Kaggle: Vaccine and Manufacturer data](https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vaccinations.csv&fbclid=IwZXh0bgNhZW0CMTEAAR3OtW8D_QG9A8kUlkJYTV6N-zb-8QOyffgzf9W7KmfZcp-Hxfhpa-WOCBQ_aem_GT1aKjRx2iNuKZoEzxbADw)
+
+![Kaggle: World population data](https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset?resource=download&fbclid=IwZXh0bgNhZW0CMTEAAR0WGn9X_c-z-QeLqBUAxpCcGuSliZUIPwjUnBGtbc6PodeYMHcXHaF0xvA_aem_P5nqzzQkZwaB25RUK0qi7Q&select=world_population.csv)
+
+These have to be put into "../data/\_raw" in your Rstudio. Now to loading:
 
 ```{r}
 #| echo: false
@@ -101,6 +110,7 @@ manufacturer_world_pop <- manufacturer_world_pop |>
 # Calculating the percentage of the population who has been vaccinated
 manufacturer_world_pop <- manufacturer_world_pop |> 
   mutate(`Percentage Vaccinated` =(`Vaccinated people pr country`/`Population`)*100)
+
 ```
 
 Writing files:
