@@ -10,5 +10,7 @@ country_vaccinations.csv (17.73 MB)
 
 country_vaccinations_by_manufacturer.csv(1.5 MB)
 
+We also use this data on the world population by coutry/territory, where the population of each country is listed from 1970 to 2022. Other information can also be found.
+https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset?resource=download&fbclid=IwZXh0bgNhZW0CMTEAAR0WGn9X_c-z-QeLqBUAxpCcGuSliZUIPwjUnBGtbc6PodeYMHcXHaF0xvA_aem_P5nqzzQkZwaB25RUK0qi7Q&select=world_population.csv
 
-
+world_population.csv (29.25 KB)

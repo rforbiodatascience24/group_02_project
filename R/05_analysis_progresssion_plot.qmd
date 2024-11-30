@@ -1,0 +1,64 @@
+---
+title: "05_analysis_progression_plot"
+format: html
+editor: visual
+---
+
+## Progression plots of different countries' cumulative vaccination amounts
+
+I want to take X number of different countries to see the development of the number of citizents that have been vaccinated throughout the period. We will look at all types of vaccinations, so the amount of vaccinations with be summarized based on dates.
+
+```{r}
+library(tidyverse)
+
+# Load the dataset that we've used before. 
+data <- manufac_world_pop
+
+# Prepare the data. Filtering so we get those countries we want to include in the plot. Making sure that they're somewhat near each other, so that it's possible to see them all, without some of the graphs becoming to small. 
+filtered_data <- data %>%
+  filter(Country %in% c("Denmark", "Latvia", "Argentina", "Romania", "Croatia", "Malta")) %>% #Choosing the countries i want to include in the plot. 
+  mutate(date = as.Date(date, format = "%Y-%m-%d")) %>% 
+  #making sure that the dates are written in the same way with the same notation
+  arrange(Country, date)
+
+
+# Reorder countries based on their maximum vaccination values (lowest first )
+# Reorder countries by max values, making sure that those graphs with the lowest values are visible
+filtered_data <- filtered_data %>%
+  group_by(Country) %>%
+  mutate(max_vaccinations = max(total_vaccinations, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(Country = fct_reorder(Country, max_vaccinations, .desc = TRUE))  
+
+
+# Plot the lines ensuring visibility of lower-value countries
+Plot <- ggplot(filtered_data, aes(x = date, y = total_vaccinations, color = Country)) +
+  geom_line(aes(group = Country), size = 1, linetype = "solid") +  # Force grouping and solid lines
+  labs(
+    title = "Vaccination Progression by Country",
+    x = "Date",
+    y = "Total Vaccinations (all types)",
+    color = "Country"
+  ) +
+  theme_minimal()+
+  theme(legend.position = "bottom")+
+  scale_x_date(
+    breaks = "1 month",  # Includin breaks in the x axis per month of the period
+    labels = date_format("%b %Y")  # formatting the labels 
+  )+
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)  # Making the labels on the x-axis stand with a 45° angle 
+  )+
+  scale_y_continuous(
+    labels = label_comma(),  # Remove scientific notation on the y-axis
+    breaks = seq(0, max(filtered_data$total_vaccinations, na.rm = TRUE), by = 4000000)  # Add breaks every 4 million 
+  )
+```
+
+Now this plot needs to be put into the folder results:
+
+```{r}
+# Using ggsave to save the picture as a png to the correct path. 
+ggsave(filename = "../results/vaccination_progression.png", plot = Plot, width = 10, height = 6, dpi = 300)
+
+```

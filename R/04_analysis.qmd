@@ -4,21 +4,74 @@ format: html
 editor: visual 
 ---
 
-## Analysis and plots
+## Analysis and plots - world plots
 
 First of we'd like to make a heat map over the world when taking vaccine amount in to account.
 
 We load necessary libraries:
 
-```{r} # Libraries library(tidyverse) library(scales)}
+```{r}
+library(tidyverse)
+library(scales)
 ```
 
 Load the data:
 
-```{r} # Loading data manufac_wolrd_pop <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")}
+```{r}
+#Loading data
+manufac_world_pop <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
+
 ```
 
-bla bla
+```{r}
+# Filtering data by country for easier overview 
 
-```{r} # Creating a heat map based on the percentage vaccinated pr country in the data set ggplot(manufac_wolrd_pop, aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +   geom_polygon(color = "black", size = 0.2) +   scale_fill_gradient(low = "lightblue", high = "darkblue", na.value = "grey50", name = "Vaccination %") +   theme_minimal() +   labs(     title = "Vaccination Percentage by Country",     subtitle = "Countries color-coded by vaccination percentage. Grey countries not included.",     caption = "Data Source: Kaggle",     x = "hello",     y = "hello"        ) +   theme(     axis.text = element_blank(),     axis.ticks = element_blank(),     panel.grid = element_blank(),     legend.position = "bottom"   )}
+manufac_world_pop <- manufac_world_pop |> 
+  arrange(by_group=Country)
+
+```
+
+### Plotting the actual plot
+
+```{r}
+# Loading the maps package
+
+library(maps)
+world_map <- map_data("world")
+
+# Now we merge the world map and the data we just did: 
+world_map_vaccinated <- world_map |> 
+  left_join(manufac_world_pop, by = c("region" = "Country"), relationship = "many-to-many")
+
+```
+
+```{r}
+# Finding total amount of vaccinations pr country
+Vaccinated_by_country_all_vaccines <- manufacturer_data %>%
+  filter(date == '2022-03-25') %>%  # Filter by specific date
+  group_by(location) %>%  # Group by location
+  summarise(Total_vaccinations = sum(total_vaccinations, na.rm = TRUE))  # Summarize total vaccinations
+```
+
+```{r}
+
+ggplot(world_map_vaccinated, aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
+  geom_polygon(color = "black", size = 0.2) +
+  scale_fill_gradient(low = "lightblue", high = "darkblue", na.value = "grey50", name = "Vaccination %") +
+  theme_minimal() +
+  labs(
+    title = "Vaccination Percentage by Country",
+    subtitle = "Countries color-coded by vaccination percentage. Grey countries not included.",
+    caption = "Data Source: Kaggle",
+    x = "hello",
+    y = "hello"
+    
+  ) +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  )
+
 ```
