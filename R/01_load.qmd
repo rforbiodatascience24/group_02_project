@@ -1,6 +1,16 @@
 ### Loading data
 
-Here we will make a new data file under the data-folder named; "01\_...\_load.tsv". We will combine the two data sets that we have into one.
+Here we will make a new data file under the data-folder named; "01\_...\_load.tsv". We will combine the three data sets that we have.
+
+The files should be downloaded with the provided links and be placed in the "\_raw" folder which should be in the "data" folder.
+
+From:
+
+![Kaggle: Vaccine and Manufacturer data](https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vaccinations.csv&fbclid=IwZXh0bgNhZW0CMTEAAR3OtW8D_QG9A8kUlkJYTV6N-zb-8QOyffgzf9W7KmfZcp-Hxfhpa-WOCBQ_aem_GT1aKjRx2iNuKZoEzxbADw){alt="Kaggle: Vaccine and Manufacturer data"}
+
+![Kaggle: World population data](https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset?resource=download&fbclid=IwZXh0bgNhZW0CMTEAAR0WGn9X_c-z-QeLqBUAxpCcGuSliZUIPwjUnBGtbc6PodeYMHcXHaF0xvA_aem_P5nqzzQkZwaB25RUK0qi7Q&select=world_population.csv){alt="Kaggle: World population data"}
+
+These have to be put into "../data/\_raw" in your Rstudio. Now to loading:
 
 ```{r}
 #| echo: false

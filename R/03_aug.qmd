@@ -7,7 +7,11 @@ editor: visual
 
 ## Data augmentation
 
-The manufacturer data and vaccine data contains a lot of the same information, the main differences are size. Therefore we sometimes we make trial runs for some of the code with that data set, but our main code consist of the vaccine data.
+The manufacturer data and vaccine data contains a lot of the same information, the main differences are size. Therefore we make the code with that data set for the manufacture and world population.
+
+If we have time will make the same for the vaccine data.
+
+Loading libraries:
 
 ```{r}
 #| echo: false
@@ -18,15 +22,7 @@ library(dplyr)
 library(readr)
 ```
 
-We will join the vaccine data and the world population data and making some new variables. But you have to download three files:
-
-From:
-
-![Kaggle: Vaccine and Manufacturer data](https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vaccinations.csv&fbclid=IwZXh0bgNhZW0CMTEAAR3OtW8D_QG9A8kUlkJYTV6N-zb-8QOyffgzf9W7KmfZcp-Hxfhpa-WOCBQ_aem_GT1aKjRx2iNuKZoEzxbADw)
-
-![Kaggle: World population data](https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset?resource=download&fbclid=IwZXh0bgNhZW0CMTEAAR0WGn9X_c-z-QeLqBUAxpCcGuSliZUIPwjUnBGtbc6PodeYMHcXHaF0xvA_aem_P5nqzzQkZwaB25RUK0qi7Q&select=world_population.csv)
-
-These have to be put into "../data/\_raw" in your Rstudio. Now to loading:
+Loading the data to be cleaned:
 
 ```{r}
 #| echo: false
@@ -81,7 +77,7 @@ Now we join the data:
 
 ```{r}
 # Joining data
-## Vaccine and world population
+## Vaccine and world population - This will happen if we have time
 
 ## Manufacture and world population
 manufacturer_world_pop <- aug_manufacturer |> 

@@ -10,6 +10,7 @@ Here i want to make a plot similar to the one in 05_analysis but this time with 
 
 ```{r}
 library(tidyverse)
+library(scales)
 
 # Load the dataset that we've used before. 
 data <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
