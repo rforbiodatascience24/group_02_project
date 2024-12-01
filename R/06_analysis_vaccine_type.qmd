@@ -12,7 +12,7 @@ Here i want to make a plot similar to the one in 05_analysis but this time with 
 library(tidyverse)
 
 # Load the dataset that we've used before. 
-data <- manufac_world_pop
+data <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
 
 # Prepare the data. Filtering so we get those countries we want to include in the plot. Making sure that they're somewhat near each other, so that it's possible to see them all, without some of the graphs becoming to small. 
 filtered_data <- data %>%
@@ -43,12 +43,8 @@ Plot <- ggplot(filtered_data, aes(x = date, y = total_vaccinations, color = vacc
   theme_minimal()+
   theme(legend.position = "bottom")+
    scale_y_continuous(
-    labels = label_comma())
-Plot
-```
-
-```{r}
- scale_x_date(
+    labels = label_comma()) +
+   scale_x_date(
     breaks = "1 month",  # Includin breaks in the x axis per month of the period
     labels = date_format("%b %Y")  # formatting the labels 
   )+
@@ -57,6 +53,10 @@ Plot
   )+
   scale_y_continuous(
     labels = label_comma(),  # Remove scientific notation on the y-axis
-    breaks = seq(0, max(filtered_data$total_vaccinations, na.rm = TRUE), by = 4000000)  # Add breaks every 4 million 
+    breaks = seq(0, max(filtered_data$total_vaccinations, na.rm = TRUE), by = 20000000)  # Add breaks every 20 million 
   )
+Plot
+
+# Saving plot
+ggsave("../results/vaccine_progression.png", plot = Plot)
 ```

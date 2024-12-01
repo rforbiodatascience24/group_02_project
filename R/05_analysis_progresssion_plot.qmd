@@ -54,6 +54,7 @@ Plot <- ggplot(filtered_data, aes(x = date, y = total_vaccinations, color = Coun
     labels = label_comma(),  # Remove scientific notation on the y-axis
     breaks = seq(0, max(filtered_data$total_vaccinations, na.rm = TRUE), by = 4000000)  # Add breaks every 4 million 
   )
+Plot
 ```
 
 Now this plot needs to be put into the folder results:

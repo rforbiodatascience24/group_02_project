@@ -16,7 +16,6 @@ The manufacturer data and vaccine data contains a lot of the same information, t
 library(tidyverse)
 library(dplyr)
 library(readr)
-library(httr)
 ```
 
 We will join the vaccine data and the world population data and making some new variables. But you have to download three files:
@@ -96,16 +95,9 @@ manufacturer_world_pop <- aug_manufacturer |>
 Further manipulation, first of with manufacturer and world population data:
 
 ```{r}
-# Finding the total amount of vaccination pr country
-manufacturer_world_pop <- manufacturer_world_pop |> 
-  group_by(Country) |> # Grouping by country and taking to sum of all vaccinations
-  arrange(date) |> # Making the tibble cronological 
-  mutate(`Vaccinations pr country` = cumsum(total_vaccinations)) |>  # Cumulative sum
-  ungroup()
-
 # Finding the total amount of people vaccinated pr country - 2 vaccination pr person
 manufacturer_world_pop <- manufacturer_world_pop |>
-  mutate(`Vaccinated people pr country` = round(`Vaccinations pr country`/2,0))
+  mutate(`Vaccinated people pr country` = round(total_vaccinations/2,0))
 
 # Calculating the percentage of the population who has been vaccinated
 manufacturer_world_pop <- manufacturer_world_pop |> 
