@@ -30,3 +30,5 @@ https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset?resou
 world_population.csv (29.25 KB)
 
 Our thought with data sets has been to look at how different nations handled the Covid-19 pandemic. We want to look at which vaccines where used and how fast the world has to adapt to the circumstances. 
+
+Things that we know: 

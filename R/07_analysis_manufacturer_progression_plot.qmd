@@ -1,6 +1,8 @@
 ---
-title: "06_analysis_manufacturer_progression_plot.qmd"
-format: html
+title: "07_analysis_manufacturer_progression_plot.qmd"
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 

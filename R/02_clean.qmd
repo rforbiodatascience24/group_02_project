@@ -1,7 +1,8 @@
 ---
 title: "02_clean_data"
-author: "Group 02"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: "06_analysis_vaccine_type"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 

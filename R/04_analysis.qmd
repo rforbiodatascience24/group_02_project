@@ -1,7 +1,9 @@
 ---
 title: "04_analysis" 
-format: html 
-editor: visual 
+format:
+  html:
+    embed-resources: true
+editor: visual
 ---
 
 ## Analysis and plots - world plots

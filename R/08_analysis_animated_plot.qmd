@@ -1,7 +1,9 @@
 ---
 title: "animation traik"
 author: "Fabrice Tangih"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 
