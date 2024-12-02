@@ -88,22 +88,22 @@ Which packages did we use:
           style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
           alt="Overall world progression of vaccinations (all types)">
         <img 
-          src="../results/world_plot_2020_12_31.jpeg" 
+          src="../results/world_plot_2020-12-31.jpeg" 
           class="fragment" 
           style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
           alt="Overall world progression of vaccinations (all types)">
         <img 
-          src="../results/world_plot_2021_05_13.jpeg" 
+          src="../results/world_plot_2021-05-13.jpeg" 
           class="fragment" 
           style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
           alt="Overall world progression of vaccinations (all types)">
         <img 
-          src="../results/world_plot_2022_03_25.jpeg" 
+          src="../results/world_plot_2022-03-25.jpeg" 
           class="fragment" 
           style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
           alt="Overall world progression of vaccinations (all types)">
         <img 
-          src="../results/whole_world_plot_2022_03_25.jpeg" 
+          src="../results/whole_world_plot_2022-03-25.jpeg" 
           class="fragment" 
           style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
           alt="Overall world progression of vaccinations (all types)">
