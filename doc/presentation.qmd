@@ -10,9 +10,15 @@ format:
 ---
 
 ## Introduction
+<ul>
+  <li class="fragment">What did we want to do</li>
+  <li class="fragment">What do we want to figure out - comparisons</li>
+   <ul>
+      <li class="fragment">Mechanisms of action</li>
+      <li class="fragment">Efficiency</li>
+   <ul>
+</ul>
 
-- What did we want to work with? And why? 
-- What have we done? 
 
 ## Materials and methods
 
@@ -31,7 +37,7 @@ What have we done with the data?
 
 
 
-# Results
+# Results (and)
 
 ##
 <section>
@@ -43,20 +49,16 @@ What have we done with the data?
         <li class="fragment">Vaccination types</li>
         <li class="fragment">Vaccination types in specific countries</li>
         <li class="fragment">Overall world progression of vaccinations (all types)</li>
-        <img src="./results/vaccine_progression.png" class="fragment" style="position: absolute; top: 50px; left: 50px;" />
+        <img data-src="../result/vaccine_progression.png" class="fragment" style="position: absolute; top: 50px; left: 50px;" />
       </ul>
   </ul>
 </section>
 
 
-## Analysis
-
-tekst tekst
-
-tekst
 
 # Discussion
 ## <span style="font-size: 50px;">Problems we've had throughout the project </span>
+
 <ul>
   <li class="fragment zoom-in">It was hard to find data that wasn't already tidy</li>
   <li class="fragment zoom-in">Plots being too ambitious</li>
@@ -71,5 +73,12 @@ tekst
 
 ## <span style="font-size: 50px;">How we've dealt with these problems </span>
 
+<ul>
+  <li class="fragment zoom-in">Ask friends, ask StackOverflow, and ask ChatGPT</li>
 
-tekst tekst tekst
+   <ul>
+      <li class="fragment zoom-in"> point </li>
+      <li class="fragment zoom-in">popint 2</li>
+   <ul>
+</ul>
+
