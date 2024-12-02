@@ -11,18 +11,20 @@ format:
 ---
 
 ## Introduction
-::: {style="font-size: 25px; line-height: 1.2;"}
+::: {style="font-size: 35px; line-height: 1.2;"}
 Covid began in dec. 2019 in Wuhan China, and the world was quickly taken aback by it. Moderna and Pfizer were the first vaccines brought onto the market and was released in dec. 2020. 
 :::
 
 <ul>
-  <li class="fragment">What did we want to do</li>
+  <li class="fragment">Our data, and why did we choose this</li>
   <li class="fragment">What do we want to figure out - comparisons</li>
    <ul>
       <li class="fragment">Mechanisms of action</li>
       <li class="fragment">Efficiency</li>
    <ul>
 </ul>
+
+
 
 
 ## Materials and methods
@@ -40,7 +42,22 @@ What have we done with the data?
   <li class="fragment zoom-in">Create presentation to present data</li>
 </ul>
 
+## Materials and Methods 
 
+
+
+
+::: {style="font-size: 25px; line-height: 1.2; max-width: 900px; margin: auto;"}
+| Materials            | Methods             |
+|---------------------------------|---------------------------|
+**Raw files** <br>- country_vaccinations_by_manufacturer.csv <br>- world_population.csv | fisk
+|                       |                 |
+:::
+
+::: {style="font-size: 35px; line-height: 0.9;"}
+
+Which packages did we use: 
+::: 
 
 # Results (and)
 
@@ -64,7 +81,7 @@ What have we done with the data?
 </section>
 ##
 <section>
-  data-background-image="../results/vaccine_progression.png"
+  data-background-image="../results/vaccine_progression.jpeg"
   data-background-size="cover"
   data-background-opacity="1"
   data-auto-animate="false"
