@@ -12,7 +12,7 @@ format:
 
 ## Introduction
 ::: {style="font-size: 35px; line-height: 1.2;"}
-Covid began in dec. 2019 in Wuhan China, and the world was quickly taken aback by it. Moderna and Pfizer were the first vaccines brought onto the market and was released in dec. 2020. 
+Covid-19 began in dec. 2019 in Wuhan China, and the world was quickly taken aback by it. Moderna and Pfizer were the first vaccines brought onto the market and was released in dec. 2020. 
 :::
 
 <ul>
@@ -28,9 +28,9 @@ Covid began in dec. 2019 in Wuhan China, and the world was quickly taken aback b
 
 
 ## Materials and methods
-
+::: {style="font-size: 35px; line-height: 1.2;"}
 **Our data** - covid 19 vaccination data (source: Kaggle.com) and world population data (source: Kaggle.com)
-
+:::
 What have we done with the data? 
 
 <ul>
@@ -50,13 +50,19 @@ What have we done with the data?
 ::: {style="font-size: 25px; line-height: 1.2; max-width: 900px; margin: auto;"}
 | Materials            | Methods             |
 |---------------------------------|---------------------------|
-**Raw files** <br>- country_vaccinations_by_manufacturer.csv <br>- world_population.csv | fisk
+**Raw files** <br>- country_vaccinations_by_manufacturer.csv <br>- world_population.csv | Data tidying <br> Cleaning data <br> Producing plots <br> Litterary searching  
 |                       |                 |
 :::
 
-::: {style="font-size: 35px; line-height: 0.9;"}
+::: {style="font-size: 30px; line-height: 0.9;"}
 
 Which packages did we use: 
+- *tidyverse*
+- *scales*
+- *maps* 
+- *dplyr*
+- *ggplot2*
+
 ::: 
 
 # Results (and)
@@ -106,4 +112,6 @@ Which packages did we use:
 
 
 ## Conclusion
+
+
 
