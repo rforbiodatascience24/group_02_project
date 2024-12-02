@@ -29,15 +29,18 @@ manufac_world_pop <- read_tsv("../data/03_manufacturer_world_population_aug.tsv"
 manufac_world_pop <- manufac_world_pop |> 
   arrange(by_group=Country)
 
+  
 ```
 
 ### Plotting the actual plot
+
+importing another data set so we can make a heat map. We will combine the data here but not make a new data file because of it being to big to load.
 
 ```{r}
 # Loading the maps package
 
 library(maps)
-world_map <- map_data("world")
+world_map <- map_data("world") # This gives us long and lat of each country
 
 # Now we merge the world map and the data we just did: 
 world_map_vaccinated <- world_map |> 
@@ -45,33 +48,228 @@ world_map_vaccinated <- world_map |>
 
 ```
 
-```{r}
-# Finding total amount of vaccinations pr country
-Vaccinated_by_country_all_vaccines <- manufacturer_data %>%
-  filter(date == '2022-03-25') %>%  # Filter by specific date
-  group_by(location) %>%  # Group by location
-  summarise(Total_vaccinations = sum(total_vaccinations, na.rm = TRUE))  # Summarize total vaccinations
-```
+Plotting heat map for different dates through the data set:
 
 ```{r}
-
-ggplot(world_map_vaccinated, aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
-  geom_polygon(color = "black", size = 0.2) +
-  scale_fill_gradient(low = "lightblue", high = "darkblue", na.value = "grey50", name = "Vaccination %") +
+# Plotting with ggplot
+## First month of the vaccines
+p1 <- world_map_vaccinated |> 
+  filter(date <= as.Date("2020-12-31")) |> # Filter up to a certain date
+  group_by(region) |> # Grouping by country 
+  summarise(long, # Keeping the following variables and making sure that only the 
+            lat,  # highest percentage is recorded for each country
+            group,
+            `Percentage Vaccinated`=max(`Percentage Vaccinated`, na.rm = TRUE)) |> 
+  ungroup() |> # Ungrouping
+  ggplot(aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
+  geom_polygon(color = "black", size = 0.2) + # Making the actual plot
+  scale_fill_gradient(low = "lightblue",
+                       high = "darkblue",
+                       na.value = "grey50",
+                       name = "Vaccination %") +
   theme_minimal() +
   labs(
-    title = "Vaccination Percentage by Country",
-    subtitle = "Countries color-coded by vaccination percentage. Grey countries not included.",
-    caption = "Data Source: Kaggle",
-    x = "hello",
-    y = "hello"
-    
-  ) +
+    title = "Vaccination Percentage by Country, first month (2020-12-31)",
+    subtitle = "Countries color-coded by vaccination percentage.",
+    caption = "Data Source: Kaggle") +
+  theme(
+    axis.text = element_blank(), # Making sure that axis are correctly formated
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  ) 
+
+# Displaying the plot
+p1
+
+```
+
+We repeat the process for different dates in the data set:
+
+```{r}
+# Plotting with ggplot
+## Febuary 2021
+p2 <- world_map_vaccinated |> 
+  filter(date <= as.Date("2021-02-04")) |> 
+  group_by(region) |> 
+  summarise(long,
+            lat,
+            group,
+            `Percentage Vaccinated`=max(`Percentage Vaccinated`, na.rm = TRUE)) |> 
+  ungroup() |> 
+  ggplot(aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
+  geom_polygon(color = "black", size = 0.2) +
+  scale_fill_gradient(low = "lightblue",
+                       high = "darkblue",
+                       na.value = "grey50",
+                       name = "Vaccination %") +
+  theme_minimal() +
+  labs(
+    title = "Vaccination Percentage by Country, up to 2021-02-04)",
+    subtitle = "Countries color-coded by vaccination percentage.",
+    caption = "Data Source: Kaggle") +
   theme(
     axis.text = element_blank(),
     axis.ticks = element_blank(),
     panel.grid = element_blank(),
     legend.position = "bottom"
-  )
+  ) 
 
+# Displaying the plot
+p2
+```
+
+```{r}
+# Plotting with ggplot
+## May 2021
+p3 <- world_map_vaccinated |> 
+  filter(date <= as.Date("2021-05-13")) |> 
+  group_by(region) |> 
+  summarise(long,
+            lat,
+            group,
+            `Percentage Vaccinated`=max(`Percentage Vaccinated`, na.rm = TRUE)) |> 
+  ungroup() |> 
+  ggplot(aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
+  geom_polygon(color = "black", size = 0.2) +
+  scale_fill_gradient(low = "lightblue",
+                       high = "darkblue",
+                       na.value = "grey50",
+                       name = "Vaccination %") +
+  theme_minimal() +
+  labs(
+    title = "Vaccination Percentage by Country, up to 2021-05-13",
+    subtitle = "Countries color-coded by vaccination percentage.",
+    caption = "Data Source: Kaggle") +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  ) 
+
+# Displaying the plot
+p3
+```
+
+```{r}
+# Plotting with ggplot
+## March 2022
+p4 <- world_map_vaccinated |> 
+  filter(date <= as.Date("2022-03-25")) |> 
+  group_by(region) |> 
+  summarise(long,
+            lat,
+            group,
+            `Percentage Vaccinated`=max(`Percentage Vaccinated`, na.rm = TRUE)) |> 
+  ungroup() |> 
+  ggplot(aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
+  geom_polygon(color = "black", size = 0.2) +
+  scale_fill_gradient(low = "lightblue",
+                       high = "darkblue",
+                       na.value = "grey50",
+                       name = "Vaccination %") +
+  theme_minimal() +
+  labs(
+    title = "Vaccination Percentage by Country, up to 2021-02-04",
+    subtitle = "Countries color-coded by vaccination percentage.",
+    caption = "Data Source: Kaggle") +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  ) 
+
+# Displaying the plot
+p4
+```
+
+```{r}
+# Plotting the whole world
+## All the dates within the data set
+p5 <- world_map_vaccinated |> 
+  group_by(region) |> 
+  summarise(long,
+            lat,
+            group,
+            `Percentage Vaccinated`=max(`Percentage Vaccinated`, na.rm = TRUE)) |> 
+  ungroup() |> 
+  ggplot(aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
+  geom_polygon(color = "black", size = 0.2) +
+  scale_fill_gradient(low = "lightblue",
+                       high = "darkblue",
+                       na.value = "grey50",
+                       name = "Vaccination %") +
+  theme_minimal() +
+  labs(
+    title = "Vaccination Percentage by Country",
+    subtitle = "Countries color-coded by vaccination percentage. Grey countries not included.",
+    caption = "Data Source: Kaggle") +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  ) 
+
+# Displaying the plot
+p5
+```
+
+```{r}
+# Plotting continent
+## All continents 
+world_map_vaccinated |> 
+  group_by(region) |> 
+  summarise(`Percentage Vaccinated`=max(`Percentage Vaccinated`, na.rm = TRUE)) |> 
+  ungroup() 
+p6 <- world_map_vaccinated |> 
+  group_by(region == c("Argentina", "Chile", "Ecuador", "Peru", "Uruguay")) |> 
+  summarise(long,
+            lat,
+            group,
+            `Percentage Vaccinated`=max(`Percentage Vaccinated`, na.rm = TRUE)) |> 
+  ungroup() |> 
+  ggplot(aes(x = long, y = lat, group = group, fill = `Percentage Vaccinated`)) +
+  geom_polygon(color = "black", size = 0.2) +
+  scale_fill_gradient(low = "lightblue",
+                       high = "darkblue",
+                       na.value = "grey50",
+                       name = "Vaccination %") +
+  theme_minimal() +
+  labs(
+    title = "Vaccination Percentage by Country",
+    subtitle = "Countries color-coded by vaccination percentage. Grey countries not included.",
+    caption = "Data Source: Kaggle") +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  ) 
+
+# Displaying the plot
+p6
+```
+
+Saving the plots:
+
+```{r}
+# Saving plots
+# Using ggsave to save the picture as a png to the correct path.
+## p1 - 2020/12/31
+ggsave(filename = "../results/world_plot_2020-12-31.png", plot = p1, width = 10, height = 6, dpi = 300)
+
+## p2 - 2021/02/04
+ggsave(filename = "../results/world_plot_2021-02-04.png", plot = p2, width = 10, height = 6, dpi = 300)
+
+## p3 - 2021/05/13
+ggsave(filename = "../results/world_plot_2021-05-13.png", plot = p3, width = 10, height = 6, dpi = 300)
+
+## p4 - 2022/03/25
+ggsave(filename = "../results/world_plot_2022-03-25.png", plot = p4, width = 10, height = 6, dpi = 300)
+
+## p5 - world 2022/03/25
+ggsave(filename = "../results/whole_world_plot_2022-03-25.png", plot = p5, width = 10, height = 6, dpi = 300)
 ```

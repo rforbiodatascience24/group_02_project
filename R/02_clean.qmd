@@ -7,6 +7,8 @@ editor: visual
 
 ## Clean data 1
 
+Loading libraries:
+
 ```{r}
 #|echo: false
 
@@ -16,7 +18,7 @@ library(dplyr)
 library(readr)
 ```
 
-We load the dataset
+We load the data set:
 
 ```{r}
 #|echo: false
@@ -27,7 +29,7 @@ vaccines_update <- read_tsv("../data/01_vaccines_load.tsv")
 world_population_update <- read_tsv("../data/01_world_population_load.tsv")
 ```
 
-We inspect the structure
+We inspect the structure:
 
 ```{r}
 # Looking at the data 
@@ -36,7 +38,7 @@ glimpse(vaccines_update)
 glimpse(world_population_update)
 ```
 
-We start of by cleaning manufacturer data
+We start of by cleaning manufacturer data:
 
 ```{r}
 # Cleaning manufacturer data 

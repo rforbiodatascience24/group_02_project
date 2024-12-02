@@ -17,8 +17,7 @@ library(dplyr)
 
 ```{r}
 #| echo: false
-manufacturer_world_population_aug <- read_tsv("data/03_manufacturer_world_population_aug.tsv")
-View(manufacturer_world_population_aug)
+manufacturer_world_population_aug <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
 ```
 
 ## installing needed package for animations
@@ -38,7 +37,6 @@ library(av)
 library(gganimate)
 ```
 
-
 ## visualising the data
 
 ```{r}
@@ -57,8 +55,7 @@ plot <- ggplot(data = filtered_manufacturer_world_population_aug,
 
 ```
 
- 
-## Adding animation to the plot 
+## Adding animation to the plot
 
 ```{r}
 animated_plot <- plot + 
@@ -72,28 +69,3 @@ animate(animated_plot,
         height = 600, 
         renderer = gifski_renderer("animated_plot.gif")) ## saves the animation
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -7,7 +7,11 @@ editor: visual
 
 ## Data augmentation
 
-The manufacturer data and vaccine data contains a lot of the same information, the main differences are size. Therefore we sometimes we make trial runs for some of the code with that data set, but our main code consist of the vaccine data.
+The manufacturer data and vaccine data contains a lot of the same information, the main differences are size. Therefore we make the code with that data set for the manufacture and world population.
+
+If we have time will make the same for the vaccine data.
+
+Loading libraries:
 
 ```{r}
 #| echo: false
@@ -18,7 +22,7 @@ library(dplyr)
 library(readr)
 ```
 
-We will join the vaccine data and the world population data and making some new variables. But first we load the clean data:
+Loading the data to be cleaned:
 
 ```{r}
 #| echo: false
@@ -73,7 +77,7 @@ Now we join the data:
 
 ```{r}
 # Joining data
-## Vaccine and world population
+## Vaccine and world population - This will happen if we have time
 
 ## Manufacture and world population
 manufacturer_world_pop <- aug_manufacturer |> 
@@ -87,20 +91,14 @@ manufacturer_world_pop <- aug_manufacturer |>
 Further manipulation, first of with manufacturer and world population data:
 
 ```{r}
-# Finding the total amount of vaccination pr country
-manufacturer_world_pop <- manufacturer_world_pop |> 
-  group_by(Country) |> # Grouping by country and taking to sum of all vaccinations
-  arrange(date) |> # Making the tibble cronological 
-  mutate(`Vaccinations pr country` = cumsum(total_vaccinations)) |>  # Cumulative sum
-  ungroup()
-
 # Finding the total amount of people vaccinated pr country - 2 vaccination pr person
 manufacturer_world_pop <- manufacturer_world_pop |>
-  mutate(`Vaccinated people pr country` = round(`Vaccinations pr country`/2,0))
+  mutate(`Vaccinated people pr country` = round(total_vaccinations/2,0))
 
 # Calculating the percentage of the population who has been vaccinated
 manufacturer_world_pop <- manufacturer_world_pop |> 
   mutate(`Percentage Vaccinated` =(`Vaccinated people pr country`/`Population`)*100)
+
 ```
 
 Writing files:
