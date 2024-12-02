@@ -112,6 +112,11 @@ Which packages did we use:
 </section>
 
 ## Discussion
+<img src="../results/top_10_bar_chart.jpeg" 
+    class="fragment" 
+    style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
+    alt="Overall world progression of vaccinations (all types)">
+
 ##
 <h2 style="font-size: 50px; line-height: 0.9;">Problems we've had throughout the project and what we did to fix it</h2>
 
