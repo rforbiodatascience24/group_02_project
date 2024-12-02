@@ -55,19 +55,37 @@ What have we done with the data?
         <li class="fragment">Vaccination types in specific countries</li>
         <li class="fragment">Overall world progression of vaccinations (all types)</li>
         <img 
-          src="../results/vaccine_progression.png" 
+          src="../results/vaccine_progression.jpeg" 
           class="fragment" 
-          style="width: 80%; position: absolute; top: 10%; left: 10%;" 
+          style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
+          alt="Overall world progression of vaccinations (all types)">
+        <img 
+          src="../results/vaccination_progression.jpeg" 
+          class="fragment" 
+          style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
+          alt="Overall world progression of vaccinations (all types)">
+        <img 
+          src="../results/world_plot_2020_12_31.jpeg" 
+          class="fragment" 
+          style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
+          alt="Overall world progression of vaccinations (all types)">
+        <img 
+          src="../results/world_plot_2021_05_13.jpeg" 
+          class="fragment" 
+          style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
+          alt="Overall world progression of vaccinations (all types)">
+        <img 
+          src="../results/world_plot_2022_03_25.jpeg" 
+          class="fragment" 
+          style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
+          alt="Overall world progression of vaccinations (all types)">
+        <img 
+          src="../results/whole_world_plot_2022_03_25.jpeg" 
+          class="fragment" 
+          style="width: 100%; position: absolute; top: 10%; left: 0.5%;" 
           alt="Overall world progression of vaccinations (all types)">
       </ul>
   </ul>
-</section>
-##
-<section>
-  data-background-image="../results/vaccine_progression.png"
-  data-background-size="cover"
-  data-background-opacity="1"
-  data-auto-animate="false"
 </section>
 
 ## Discussion
