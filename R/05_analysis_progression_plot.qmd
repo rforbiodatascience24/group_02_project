@@ -64,6 +64,6 @@ Now this plot needs to be put into the folder results:
 
 ```{r}
 # Using ggsave to save the picture as a png to the correct path. 
-ggsave(filename = "../results/vaccination_progression.png", plot = Plot, width = 10, height = 6, dpi = 300)
+ggsave(filename = "../results/vaccination_progression.jpeg", plot = Plot, width = 10, height = 6, dpi = 300)
 
 ```
