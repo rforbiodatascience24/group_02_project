@@ -6,48 +6,108 @@ format:
     #transition: fade
     transition: slide
     slide-number: "c"
-    
 ---
 
 ## Introduction
 
-- What did we want to work with? And why? 
-- What have we done? 
+-   What did we want to work with? And why?
+-   What have we done?
 
 ## Materials and methods
 
 **Our data** - covid 19 vaccination data (source: Kaggle.com) and world population data (source: Kaggle.com)
 
-What have we done with the data? 
+What have we done with the data?
 
 <ul>
-  <li class="fragment zoom-in">Gather the data</li>
-  <li class="fragment zoom-in">Clean the data</li>
-  <li class="fragment zoom-in">Augment the data (as seen necessary)</li>
-  <li class="fragment zoom-in">Use the data to create plots</li>
-  <li class="fragment zoom-in">Analyse the plots</li>
-  <li class="fragment zoom-in">Create presentation to present data</li>
+
+<li class="fragment zoom-in">
+
+Gather the data
+
+</li>
+
+<li class="fragment zoom-in">
+
+Clean the data
+
+</li>
+
+<li class="fragment zoom-in">
+
+Augment the data (as seen necessary)
+
+</li>
+
+<li class="fragment zoom-in">
+
+Use the data to create plots
+
+</li>
+
+<li class="fragment zoom-in">
+
+Analyse the plots
+
+</li>
+
+<li class="fragment zoom-in">
+
+Create presentation to present data
+
+</li>
+
 </ul>
-
-
 
 # Results
 
-##
-<section>
-  <h2>Plots we've done</h2>
-  <ul>
-    <li class="fragment">Animated plots (gifs) </li>
-    <li class="fragment">Progression plots</li>
-      <ul>
-        <li class="fragment">Vaccination types</li>
-        <li class="fragment">Vaccination types in specific countries</li>
-        <li class="fragment">Overall world progression of vaccinations (all types)</li>
-        <img src="./results/vaccine_progression.png" class="fragment" style="position: absolute; top: 50px; left: 50px;" />
-      </ul>
-  </ul>
-</section>
+## 
 
+<section>
+
+<h2>Plots we've done</h2>
+
+<ul>
+
+<li class="fragment">
+
+Animated plots (gifs)
+
+</li>
+
+<li class="fragment">
+
+Progression plots
+
+</li>
+
+<ul>
+
+<li class="fragment">
+
+Vaccination types
+
+</li>
+
+<li class="fragment">
+
+Vaccination types in specific countries
+
+</li>
+
+<li class="fragment">
+
+Overall world progression of vaccinations (all types)
+
+</li>
+
+<img src="./results/vaccine_progression.png" class="fragment" style="position: absolute; top: 50px; left: 50px;"/>
+
+</ul>
+
+</ul>
+
+</section>
 
 ## Analysis
 
@@ -56,20 +116,53 @@ tekst tekst
 tekst
 
 # Discussion
-## <span style="font-size: 50px;">Problems we've had throughout the project </span>
+
+## [Problems we've had throughout the project ]{style="font-size: 50px;"}
+
 <ul>
-  <li class="fragment zoom-in">It was hard to find data that wasn't already tidy</li>
-  <li class="fragment zoom-in">Plots being too ambitious</li>
-  <li class="fragment zoom-in">Internal communication and work load</li>
-  <li class="fragment zoom-in">General Git/GitHub problems</li>
-   <ul>
-      <li class="fragment zoom-in">Branches being ahead</li>
-      <li class="fragment zoom-in">Data errors within git</li>
-   <ul>
+
+<li class="fragment zoom-in">
+
+It was hard to find data that wasn't already tidy
+
+</li>
+
+<li class="fragment zoom-in">
+
+Plots being too ambitious
+
+</li>
+
+<li class="fragment zoom-in">
+
+Internal communication and work load
+
+</li>
+
+<li class="fragment zoom-in">
+
+General Git/GitHub problems
+
+</li>
+
+<ul>
+
+<li class="fragment zoom-in">
+
+Branches being ahead
+
+</li>
+
+<li class="fragment zoom-in">
+
+Data errors within git
+
+</li>
+
+<ul>
+
 </ul>
 
-
-## <span style="font-size: 50px;">How we've dealt with these problems </span>
-
+## [How we've dealt with these problems ]{style="font-size: 50px;"}
 
 tekst tekst tekst
