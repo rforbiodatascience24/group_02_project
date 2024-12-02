@@ -11,6 +11,7 @@ format:
 
 ## Introduction
 
+- What did we want to work with? And why? 
 - What have we done? 
 
 ## Materials and methods
@@ -36,10 +37,11 @@ What have we done with the data?
 <section>
   <h2>Plots we've done</h2>
   <ul>
-    <li class="fragment">Animated plots</li>
+    <li class="fragment">Animated plots (gifs) </li>
     <li class="fragment">Progression plots</li>
       <ul>
         <li class="fragment">Vaccination types</li>
+        <li class="fragment">Vaccination types in specific countries</li>
         <li class="fragment">Overall world progression of vaccinations (all types)</li>
         <img src="./results/vaccine_progression.png" class="fragment" style="position: absolute; top: 50px; left: 50px;" />
       </ul>
@@ -54,7 +56,20 @@ tekst tekst
 tekst
 
 # Discussion
-## Problems we've had throughout the project 
-## How we dealt with the problems 
+## <span style="font-size: 50px;">Problems we've had throughout the project </span>
+<ul>
+  <li class="fragment zoom-in">It was hard to find data that wasn't already tidy</li>
+  <li class="fragment zoom-in">Plots being too ambitious</li>
+  <li class="fragment zoom-in">Internal communication and work load</li>
+  <li class="fragment zoom-in">General Git/GitHub problems</li>
+   <ul>
+      <li class="fragment zoom-in">Branches being ahead</li>
+      <li class="fragment zoom-in">Data errors within git</li>
+   <ul>
+</ul>
+
+
+## <span style="font-size: 50px;">How we've dealt with these problems </span>
+
 
 tekst tekst tekst
