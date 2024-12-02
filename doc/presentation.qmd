@@ -11,12 +11,12 @@ format:
 ---
 
 ## Introduction
-::: {style="font-size: 25px; line-height: 1.2;"}
-Covid began in dec. 2019 in Wuhan China, and the world was quickly taken aback by it. Moderna and Pfizer were the first vaccines brought onto the market and was released in dec. 2020. 
+::: {style="font-size: 35px; line-height: 1.2;"}
+Covid-19 began in dec. 2019 in Wuhan China, and the world was quickly taken aback by it. Moderna and Pfizer were the first vaccines brought onto the market and was released in dec. 2020. 
 :::
 
 <ul>
-  <li class="fragment">What did we want to do</li>
+  <li class="fragment">Our data, and why did we choose this</li>
   <li class="fragment">What do we want to figure out - comparisons</li>
    <ul>
       <li class="fragment">Mechanisms of action</li>
@@ -25,10 +25,12 @@ Covid began in dec. 2019 in Wuhan China, and the world was quickly taken aback b
 </ul>
 
 
+
+
 ## Materials and methods
-
+::: {style="font-size: 35px; line-height: 1.2;"}
 **Our data** - covid 19 vaccination data (source: Kaggle.com) and world population data (source: Kaggle.com)
-
+:::
 What have we done with the data? 
 
 <ul>
@@ -40,7 +42,28 @@ What have we done with the data?
   <li class="fragment zoom-in">Create presentation to present data</li>
 </ul>
 
+## Materials and Methods 
 
+
+
+
+::: {style="font-size: 25px; line-height: 1.2; max-width: 900px; margin: auto;"}
+| Materials            | Methods             |
+|---------------------------------|---------------------------|
+**Raw files** <br>- country_vaccinations_by_manufacturer.csv <br>- world_population.csv | Data tidying <br> Cleaning data <br> Producing plots <br> Litterary searching  
+|                       |                 |
+:::
+
+::: {style="font-size: 30px; line-height: 0.9;"}
+
+Which packages did we use: 
+- *tidyverse*
+- *scales*
+- *maps* 
+- *dplyr*
+- *ggplot2*
+
+::: 
 
 # Results (and)
 
@@ -87,6 +110,16 @@ What have we done with the data?
       </ul>
   </ul>
 </section>
+<<<<<<< HEAD
+=======
+##
+<section>
+  data-background-image="../results/vaccine_progression.jpeg"
+  data-background-size="cover"
+  data-background-opacity="1"
+  data-auto-animate="false"
+</section>
+>>>>>>> 2bd009797785a70dea6b6ab978ec91b3cab2031f
 
 ## Discussion
 ##
@@ -107,4 +140,6 @@ What have we done with the data?
 
 
 ## Conclusion
+
+
 
