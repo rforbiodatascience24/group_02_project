@@ -110,16 +110,6 @@ Which packages did we use:
       </ul>
   </ul>
 </section>
-<<<<<<< HEAD
-=======
-##
-<section>
-  data-background-image="../results/vaccine_progression.jpeg"
-  data-background-size="cover"
-  data-background-opacity="1"
-  data-auto-animate="false"
-</section>
->>>>>>> 2bd009797785a70dea6b6ab978ec91b3cab2031f
 
 ## Discussion
 ##
