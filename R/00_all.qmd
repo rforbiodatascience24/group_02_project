@@ -1,0 +1,41 @@
+---
+title: "00_all.qmd"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+## All documents so far
+
+### Loading our data sets
+
+{{< include 01_load.qmd >}}
+
+### Cleaning our data sets
+
+{{< include 02_clean.qmd >}}
+
+### Augmentation of our data set
+
+{{< include 03_aug.qmd >}}
+
+### 1st analysis - world map
+
+{{< include 04_analysis.qmd >}}
+
+### 2nd analysis - countries progression
+
+{{< include 05_analysis_progression_plot.qmd >}}
+
+### 3rd analysis - vaccine progression
+
+{{< include 06_analysis_vaccine_type.qmd>}}
+
+### 4th analysis - another vaccine progression
+
+{{< include 07_analysis_manufacturer_progression_plot.qmd >}}
+
+### 5th analysis - vaccine usage
+
+{{< include 10_vaccine_usage_analysis.qmd >}}

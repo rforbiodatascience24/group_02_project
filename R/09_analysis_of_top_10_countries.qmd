@@ -1,0 +1,133 @@
+---
+title: "09 Analysis of top 10 countries"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+# Analysis of the top 10 countries
+
+We here wish to form a comparison between the top 10 countries in total vaccinations to understand the trends.
+
+We wish to use from extra packages to create an animated plot
+
+```{r}
+# We load the libraries
+library(tidyverse)
+library(ggplot2)
+library(gganimate)
+library(plotly)
+library(htmlwidgets)
+library(magick)
+library(dplyr)
+library(av)
+library(gifski)
+```
+
+We now upload the augmented data
+
+```{r}
+manufacturer_world_pop <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
+vaccines_cleaned <- read_tsv("../data/02_vaccines_cleaned.tsv")
+
+```
+
+The first plot here we will create is the bar chart for the top 10 countries by total vaccinations
+
+First we will determined the top 10 countries, but remove the European Union in advance, since it isn't a country and isn't included in the vaccines_cleaned file.
+
+```{r}
+top_countries_list <- manufacturer_world_pop |>
+  filter(Country != "European Union") |>  # Exclude the European Union
+  group_by(Country) |>
+  summarise(Total_Vaccinations = sum(total_vaccinations, na.rm = TRUE)) |>
+  arrange(desc(Total_Vaccinations)) |>
+  slice(1:10) |>  # Select the top 10 countries
+  pull(Country)    # Extract the country names as a vector
+
+top_countries_list
+```
+
+The first plot here we will create is the bar chart for the top 10 countries by total vaccinations
+
+```{r}
+# Filter data for the updated top 10 countries
+top_countries <- manufacturer_world_pop |>
+  filter(Country %in% top_countries_list) |>
+  group_by(Country) |>
+  summarise(Total_Vaccinations = sum(total_vaccinations, na.rm = TRUE)) |>
+  arrange(desc(Total_Vaccinations))
+
+# Create the bar chart
+bar_chart <- ggplot(top_countries, aes(x = reorder(Country, Total_Vaccinations), y = Total_Vaccinations)) +
+  geom_col(fill = "blue") +
+  coord_flip() +
+  labs(title = "Top 10 Countries by Total Vaccinations (Excluding EU)",
+       x = "Country",
+       y = "Total Vaccinations") +
+  theme_minimal()
+
+bar_chart
+
+```
+
+## Vaccination Trends Over Time
+
+```{r}
+# Filter vaccination trends for the updated top 10 countries
+vaccination_trends <- vaccines_cleaned |>
+  filter(country %in% top_countries_list) |>
+  group_by(country, date) |>
+  summarise(Total_Vaccinations = sum(total_vaccinations, na.rm = TRUE)) |>
+  ungroup()
+
+# Create the line chart
+line_chart <- ggplot(vaccination_trends, aes(x = date, y = Total_Vaccinations, color = country)) +
+  geom_line(size = 1) +
+  labs(title = "Vaccination Trends Over Time for Top 10 Countries",
+       x = "Date",
+       y = "Total Vaccinations") +
+  theme_minimal()
+
+line_chart
+
+```
+
+## Percentage Over Time
+
+We now wish to see and animated plot of the percentage vaccinated over time
+
+```{r}
+# Calculate cumulative density for animation
+animated_data <- manufacturer_world_pop |>
+  filter(Country %in% top_countries_list, !is.na(`Percentage Vaccinated`)) |>
+  arrange(date) |>
+  group_by(Country) |>
+  mutate(Density = cumsum(`Percentage Vaccinated`) / sum(`Percentage Vaccinated`, na.rm = TRUE)) |>
+  ungroup()
+
+# Create the animated plot
+ani_plot <- ggplot(animated_data, aes(x = date, y = `Percentage Vaccinated`, color = Country, fill = Country)) +
+  geom_line(size = 1) + # Line plot for percentage vaccinated
+  geom_ribbon(aes(ymin = 0, ymax = `Percentage Vaccinated`), alpha = 0.2) + # Add density with a ribbon
+  labs(title = "Percentage of Population Vaccinated Over Time with Density",
+       x = "Date",
+       y = "Percentage Vaccinated") +
+  theme_minimal()
+
+ani_plot
+```
+
+```{r}
+animated_plot <- ani_plot + 
+transition_time(date) +
+ease_aes('linear')  # provides a smooth transition of the plot over time by transitioning through the date column
+
+animate(animated_plot, 
+        nframes = 100, 
+        fps = 10, 
+        width = 800, 
+        height = 600, 
+        renderer = gifski_renderer("animated_plot.gif")) ## saves the animation
+```

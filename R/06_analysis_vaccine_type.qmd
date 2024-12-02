@@ -1,6 +1,8 @@
 ---
 title: "06_analysis_vaccine_type"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 
@@ -9,6 +11,7 @@ editor: visual
 Here i want to make a plot similar to the one in 05_analysis but this time with the different vaccine types.
 
 ```{r}
+#| echo: false
 library(tidyverse)
 library(scales)
 

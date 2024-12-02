@@ -1,0 +1,94 @@
+---
+title: "10_vaccine_list_analysis"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+## Vaccines Usage Analysis
+
+We wish to form a list showcasing the most used vaccines, and the locations they have been mostly used.
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(knitr)
+```
+
+```{r}
+# We load the cleaned and augmented data
+vaccines_cleaned <- read_tsv("../data/02_vaccines_cleaned.tsv")
+manufacturer_cleaned <- read_tsv("../data/02_manufacturer_cleaned.tsv")
+
+# then we view the structure of the loaded data
+glimpse(vaccines_cleaned)
+glimpse(manufacturer_cleaned)
+
+
+```
+
+## Data Analysis
+
+### Most used vaccines
+
+We now find the most used vaccines
+
+```{r}
+# Let us calculate the total usage of each vaccine
+most_used_vaccines <- manufacturer_cleaned |>
+  group_by(vaccine) |>
+  summarise(Total_Usage = sum(total_vaccinations, na.rm = TRUE)) |>
+  arrange(desc(Total_Usage))
+
+most_used_vaccines
+```
+
+### Countries in use
+
+We can now identify the country with the highest usage for each vaccine
+
+```{r}
+vaccine_by_country <- manufacturer_cleaned |>
+  group_by(vaccine, location) |>
+  summarise(Total_Usage = sum(total_vaccinations, na.rm = TRUE), .groups = "drop") |> # We now drop grouping after summarise
+  arrange(desc(Total_Usage)) |>
+  group_by(vaccine) |> # We need to re-group, but only for vaccines so we get the correct order
+  slice_max(Total_Usage, n = 1) |> 
+  ungroup() |>
+  arrange(desc(Total_Usage)) |>
+  select(vaccine, location, Total_Usage) # Here we select the order of columns
+
+# View the result
+vaccine_by_country
+
+```
+
+### Nested List
+
+We see this, but let us now expand the list. Seeing for each vaccines, the countries and the total vaccinations done by said vaccine in each country.
+
+```{r}
+vaccine_country_list <- manufacturer_cleaned |>
+  group_by(vaccine, location) |>
+  summarise(Total_Usage = sum(total_vaccinations, na.rm = TRUE), .groups = "drop") |>
+  arrange(vaccine, desc(Total_Usage)) |> # We here arrange by vaccine and usage for each vaccine
+  group_by(vaccine) |>
+  nest(data = c(location, Total_Usage)) # Here we nest the country data for each vaccine
+
+vaccine_country_list
+
+```
+
+```{r}
+expanded_data <- vaccine_country_list |>
+  mutate(data = map_chr(data, ~paste(.x$location, ":", .x$Total_Usage, collapse = "; ")))
+
+kable(expanded_data, format = "html", longtable = TRUE, escape = FALSE)
+
+```
+
+```{r}
+expanded_data
+```

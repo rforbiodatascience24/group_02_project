@@ -30,3 +30,14 @@ https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset?resou
 world_population.csv (29.25 KB)
 
 Our thought with data sets has been to look at how different nations handled the Covid-19 pandemic. We want to look at which vaccines where used and how fast the world has to adapt to the circumstances. 
+
+Things that we know: 
+- There are 3 main types of vaccines in question; mRNA, viral vector and inactive virus
+- Efficiancy has varied alot, 50-95%, depending on the vaccine
+- Storage requierments have also been varied, some needing -70 celcius and others 2-8 celcius
+
+Manufacturing of the vaccines and their global use has been as following:
+- High-income countries: Pfizer/BioNTech, mainly the US and Europe although it was widely distributed globaly
+- Middel-to-low-income countries: Oxford/AstraZeneca and Sputnik V
+- Morderna, US mainly but expanding globaly
+- Sinopharm: Primarily used in China, Africa and Asia
