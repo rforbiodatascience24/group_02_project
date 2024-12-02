@@ -1,7 +1,8 @@
 ---
 title: "09 Analysis of top 10 countries"
-author: "Group 02"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 
@@ -23,6 +24,7 @@ library(dplyr)
 library(av)
 library(gifski)
 ```
+
 We now upload the augmented data
 
 ```{r}
@@ -30,9 +32,11 @@ manufacturer_world_pop <- read_tsv("../data/03_manufacturer_world_population_aug
 vaccines_cleaned <- read_tsv("../data/02_vaccines_cleaned.tsv")
 
 ```
+
 The first plot here we will create is the bar chart for the top 10 countries by total vaccinations
 
 First we will determined the top 10 countries, but remove the European Union in advance, since it isn't a country and isn't included in the vaccines_cleaned file.
+
 ```{r}
 top_countries_list <- manufacturer_world_pop |>
   filter(Country != "European Union") |>  # Exclude the European Union
@@ -46,6 +50,7 @@ top_countries_list
 ```
 
 The first plot here we will create is the bar chart for the top 10 countries by total vaccinations
+
 ```{r}
 # Filter data for the updated top 10 countries
 top_countries <- manufacturer_world_pop |>
@@ -67,8 +72,8 @@ bar_chart
 
 ```
 
-
 ## Vaccination Trends Over Time
+
 ```{r}
 # Filter vaccination trends for the updated top 10 countries
 vaccination_trends <- vaccines_cleaned |>
@@ -90,6 +95,7 @@ line_chart
 ```
 
 ## Percentage Over Time
+
 We now wish to see and animated plot of the percentage vaccinated over time
 
 ```{r}
@@ -125,5 +131,3 @@ animate(animated_plot,
         height = 600, 
         renderer = gifski_renderer("animated_plot.gif")) ## saves the animation
 ```
-
-
