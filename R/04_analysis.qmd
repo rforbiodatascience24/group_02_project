@@ -176,7 +176,7 @@ p4 <- world_map_vaccinated |>
                        name = "Vaccination %") +
   theme_minimal() +
   labs(
-    title = "Vaccination Percentage by Country, up to 2021-02-04",
+    title = "Vaccination Percentage by Country, up to 2022-03-25",
     subtitle = "Countries color-coded by vaccination percentage.",
     caption = "Data Source: Kaggle") +
   theme(

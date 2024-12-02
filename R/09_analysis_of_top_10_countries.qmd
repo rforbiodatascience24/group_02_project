@@ -70,6 +70,8 @@ bar_chart <- ggplot(top_countries, aes(x = reorder(Country, Total_Vaccinations),
 
 bar_chart
 
+ggsave(filename = "../results/top_10_bar_chart.jpeg", plot = bar_chart, width = 10, height = 6, dpi = 300)
+
 ```
 
 ## Vaccination Trends Over Time

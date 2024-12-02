@@ -112,6 +112,7 @@ Which packages did we use:
 </section>
 
 ## Discussion
+
 ##
 <h2 style="font-size: 50px; line-height: 0.9;">Problems we've had throughout the project and what we did to fix it</h2>
 
