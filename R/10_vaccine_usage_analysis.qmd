@@ -1,7 +1,8 @@
 ---
 title: "10_vaccine_list_analysis"
-author: "Group 02"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 
@@ -31,7 +32,9 @@ glimpse(manufacturer_cleaned)
 ## Data Analysis
 
 ### Most used vaccines
+
 We now find the most used vaccines
+
 ```{r}
 # Let us calculate the total usage of each vaccine
 most_used_vaccines <- manufacturer_cleaned |>
@@ -43,6 +46,7 @@ most_used_vaccines
 ```
 
 ### Countries in use
+
 We can now identify the country with the highest usage for each vaccine
 
 ```{r}
@@ -62,7 +66,9 @@ vaccine_by_country
 ```
 
 ### Nested List
+
 We see this, but let us now expand the list. Seeing for each vaccines, the countries and the total vaccinations done by said vaccine in each country.
+
 ```{r}
 vaccine_country_list <- manufacturer_cleaned |>
   group_by(vaccine, location) |>
@@ -86,4 +92,3 @@ kable(expanded_data, format = "html", longtable = TRUE, escape = FALSE)
 ```{r}
 expanded_data
 ```
-

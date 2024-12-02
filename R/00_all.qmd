@@ -36,6 +36,6 @@ editor: visual
 
 {{< include 07_analysis_manufacturer_progression_plot.qmd >}}
 
-### 5th analysis - animated plot
+### 5th analysis - vaccine usage
 
-{{< include 08_analysis_animated_plot.qmd >}}
+{{< include 10_vaccine_usage_analysis.qmd >}}
