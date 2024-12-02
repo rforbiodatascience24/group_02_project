@@ -11,6 +11,7 @@ editor: visual
 We want to take X number of different countries to see the development of the number of citizents that have been vaccinated throughout the period. We will look at all types of vaccinations, so the amount of vaccinations with be summarized based on dates.
 
 ```{r}
+#| echo: false
 library(tidyverse)
 library(scales)
 

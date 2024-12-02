@@ -10,6 +10,7 @@ editor: visual
 ## loading library
 
 ```{r}
+#| echo: false
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
@@ -34,6 +35,7 @@ install.packages("av")
 ## Loading the gganimate package
 
 ```{r}
+#| echo: false
 library(gifski)
 library(av)
 library(gganimate)

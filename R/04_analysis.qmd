@@ -13,6 +13,7 @@ First of we'd like to make a heat map over the world when taking vaccine amount 
 We load necessary libraries:
 
 ```{r}
+#| echo: false
 library(tidyverse)
 library(scales)
 ```
@@ -20,12 +21,14 @@ library(scales)
 Load the data:
 
 ```{r}
+#| echo: false
 #Loading data
 manufac_world_pop <- read_tsv("../data/03_manufacturer_world_population_aug.tsv")
 
 ```
 
 ```{r}
+
 # Filtering data by country for easier overview 
 
 manufac_world_pop <- manufac_world_pop |> 
@@ -40,7 +43,7 @@ importing another data set so we can make a heat map. We will combine the data h
 
 ```{r}
 # Loading the maps package
-
+#| echo: false
 library(maps)
 world_map <- map_data("world") # This gives us long and lat of each country
 
