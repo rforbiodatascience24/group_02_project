@@ -5,19 +5,47 @@ format:
     #footer: R for bio data science E24 project presentation
     #transition: fade
     transition: slide
+    slide-number: "c"
+    
 ---
 
 ## Introduction
 
-tekst tekst tekst
+- What have we done? 
 
 ## Materials and methods
 
-tekst tekst
+**Our data** - covid 19 vaccination data (source: Kaggle.com) and world population data (source: Kaggle.com)
 
-## Results
+What have we done with the data? 
 
-Tekst tekst tekst
+<ul>
+  <li class="fragment zoom-in">Gather the data</li>
+  <li class="fragment zoom-in">Clean the data</li>
+  <li class="fragment zoom-in">Augment the data (as seen necessary)</li>
+  <li class="fragment zoom-in">Use the data to create plots</li>
+  <li class="fragment zoom-in">Analyse the plots</li>
+  <li class="fragment zoom-in">Create presentation to present data</li>
+</ul>
+
+
+
+# Results
+
+##
+<section>
+  <h2>Plots we've done</h2>
+  <ul>
+    <li class="fragment">Animated plots</li>
+    <li class="fragment">Progression plots</li>
+      <ul>
+        <li class="fragment">Vaccination types</li>
+        <li class="fragment">Overall world progression of vaccinations (all types)</li>
+        <img src="./results/vaccine_progression.png" class="fragment" style="position: absolute; top: 50px; left: 50px;" />
+      </ul>
+  </ul>
+</section>
+
 
 ## Analysis
 
@@ -25,6 +53,8 @@ tekst tekst
 
 tekst
 
-## Discussion
+# Discussion
+## Problems we've had throughout the project 
+## How we dealt with the problems 
 
 tekst tekst tekst
