@@ -6,9 +6,15 @@ format:
     #transition: fade
     transition: slide
     slide-number: "c"
+    auto-stretch: false
+    
 ---
 
 ## Introduction
+::: {style="font-size: 25px; line-height: 1.2;"}
+Covid began in dec. 2019 in Wuhan China, and the world was quickly taken aback by it. Moderna and Pfizer were the first vaccines brought onto the market and was released in dec. 2020. 
+:::
+
 <ul>
   <li class="fragment">What did we want to do</li>
   <li class="fragment">What do we want to figure out - comparisons</li>
@@ -18,65 +24,28 @@ format:
    <ul>
 </ul>
 
-<<<<<<< HEAD
--   What did we want to work with? And why?
--   What have we done?
-=======
->>>>>>> 0e1a49b05fbd188296d3a32713c7d7a1a8929bfe
 
 ## Materials and methods
 
 **Our data** - covid 19 vaccination data (source: Kaggle.com) and world population data (source: Kaggle.com)
 
-What have we done with the data?
+What have we done with the data? 
 
 <ul>
-
-<li class="fragment zoom-in">
-
-Gather the data
-
-</li>
-
-<li class="fragment zoom-in">
-
-Clean the data
-
-</li>
-
-<li class="fragment zoom-in">
-
-Augment the data (as seen necessary)
-
-</li>
-
-<li class="fragment zoom-in">
-
-Use the data to create plots
-
-</li>
-
-<li class="fragment zoom-in">
-
-Analyse the plots
-
-</li>
-
-<li class="fragment zoom-in">
-
-Create presentation to present data
-
-</li>
-
+  <li class="fragment zoom-in">Gather the data</li>
+  <li class="fragment zoom-in">Clean the data</li>
+  <li class="fragment zoom-in">Augment the data (as seen necessary)</li>
+  <li class="fragment zoom-in">Use the data to create plots</li>
+  <li class="fragment zoom-in">Analyse the plots</li>
+  <li class="fragment zoom-in">Create presentation to present data</li>
 </ul>
+
+
 
 # Results (and)
 
-## 
-
+##
 <section>
-<<<<<<< HEAD
-=======
   <h2>Plots we've done</h2>
   <ul>
     <li class="fragment">Animated plots (gifs) </li>
@@ -85,119 +54,32 @@ Create presentation to present data
         <li class="fragment">Vaccination types</li>
         <li class="fragment">Vaccination types in specific countries</li>
         <li class="fragment">Overall world progression of vaccinations (all types)</li>
-        <img data-src="../result/vaccine_progression.png" class="fragment" style="position: absolute; top: 50px; left: 50px;" />
+        <img src="../result/vaccine_progression.png" class="fragment" style="width: 80%; margin: auto;" alt="Overall world progression of vaccinations (all types)">
       </ul>
   </ul>
 </section>
->>>>>>> 0e1a49b05fbd188296d3a32713c7d7a1a8929bfe
 
-<h2>Plots we've done</h2>
+tekst tekst 
+[Overall world progression of vaccinations](../result/vaccine_progression.png){width=80%}
 
-<ul>
-
-<li class="fragment">
-
-Animated plots (gifs)
-
-</li>
-
-<li class="fragment">
-
-Progression plots
-
-</li>
-
-<ul>
-
-<li class="fragment">
-
-Vaccination types
-
-</li>
-
-<li class="fragment">
-
-Vaccination types in specific countries
-
-</li>
-
-<li class="fragment">
-
-Overall world progression of vaccinations (all types)
-
-</li>
-
-<img src="./results/vaccine_progression.png" class="fragment" style="position: absolute; top: 50px; left: 50px;"/>
-
-</ul>
-
-</ul>
-
-</section>
+ 
+## Discussion
+##
+<h2 style="font-size: 50px; line-height: 0.9;">Problems we've had throughout the project and what we did to fix it</h2>
 
 
-# Discussion
-<<<<<<< HEAD
+::: {style="font-size: 25px; line-height: 1.2; max-width: 800px; margin: auto;"}
+| Problem                                     | What did we do             |
+|----------------------|-----------------|
+| Hard to find data non-tidy data | Continue looking and searching the internet |
+| Plots being too ambitious                  | Simplifying the plots without loosing the meaning of the plots |
+| Internal communication and workload        | Switching comunication media from Microsoft teams to Messenger. As well as trying to delegate some of the plots and data analysis |
+| **General Git/GitHub problems:**<br>- Branches being ahead of main <br>- data errors within git  | Asking friends, looking through slack messages, asking StackOverflow, or asking ChatGPT  |
+|                                            |                 |
+:::
 
-## [Problems we've had throughout the project ]{style="font-size: 50px;"}
-=======
-## <span style="font-size: 50px;">Problems we've had throughout the project </span>
->>>>>>> 0e1a49b05fbd188296d3a32713c7d7a1a8929bfe
 
-<ul>
 
-<li class="fragment zoom-in">
 
-It was hard to find data that wasn't already tidy
-
-</li>
-
-<li class="fragment zoom-in">
-
-Plots being too ambitious
-
-</li>
-
-<li class="fragment zoom-in">
-
-Internal communication and work load
-
-</li>
-
-<li class="fragment zoom-in">
-
-General Git/GitHub problems
-
-</li>
-
-<ul>
-
-<li class="fragment zoom-in">
-
-Branches being ahead
-
-</li>
-
-<li class="fragment zoom-in">
-
-Data errors within git
-
-</li>
-
-<ul>
-
-</ul>
-
-<<<<<<< HEAD
-## [How we've dealt with these problems ]{style="font-size: 50px;"}
-=======
-<ul>
-  <li class="fragment zoom-in">Ask friends, ask StackOverflow, and ask ChatGPT</li>
-
-   <ul>
-      <li class="fragment zoom-in"> point </li>
-      <li class="fragment zoom-in">popint 2</li>
-   <ul>
-</ul>
->>>>>>> 0e1a49b05fbd188296d3a32713c7d7a1a8929bfe
+## Conclusion
 
