@@ -62,5 +62,5 @@ Plot <- ggplot(filtered_data, aes(x = date, y = total_vaccinations, color = vacc
 Plot
 
 # Saving plot
-ggsave("../results/vaccine_progression.png", plot = Plot)
+ggsave("../results/vaccine_progression.jpeg", plot = Plot)
 ```

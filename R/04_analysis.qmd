@@ -264,17 +264,17 @@ Saving the plots:
 # Saving plots
 # Using ggsave to save the picture as a png to the correct path.
 ## p1 - 2020/12/31
-ggsave(filename = "../results/world_plot_2020-12-31.png", plot = p1, width = 10, height = 6, dpi = 300)
+ggsave(filename = "../results/world_plot_2020-12-31.jpeg", plot = p1, width = 10, height = 6, dpi = 300)
 
 ## p2 - 2021/02/04
-ggsave(filename = "../results/world_plot_2021-02-04.png", plot = p2, width = 10, height = 6, dpi = 300)
+ggsave(filename = "../results/world_plot_2021-02-04.jpeg", plot = p2, width = 10, height = 6, dpi = 300)
 
 ## p3 - 2021/05/13
-ggsave(filename = "../results/world_plot_2021-05-13.png", plot = p3, width = 10, height = 6, dpi = 300)
+ggsave(filename = "../results/world_plot_2021-05-13.jpeg", plot = p3, width = 10, height = 6, dpi = 300)
 
 ## p4 - 2022/03/25
-ggsave(filename = "../results/world_plot_2022-03-25.png", plot = p4, width = 10, height = 6, dpi = 300)
+ggsave(filename = "../results/world_plot_2022-03-25.jpeg", plot = p4, width = 10, height = 6, dpi = 300)
 
 ## p5 - world 2022/03/25
-ggsave(filename = "../results/whole_world_plot_2022-03-25.png", plot = p5, width = 10, height = 6, dpi = 300)
+ggsave(filename = "../results/whole_world_plot_2022-03-25.jpeg", plot = p5, width = 10, height = 6, dpi = 300)
 ```
